@@ -22,7 +22,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-20">
                         <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Features</div>
-                        <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight">
+                        <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight">
                             WHY CHOOSE <br />
                             <span className="text-accent italic">ZANNTEC</span>
                         </h2>
@@ -63,7 +63,7 @@ export default function Home() {
                     <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
                         <div>
                             <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Case Studies</div>
-                            <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
+                            <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
                                 PROVEN <span className="text-accent italic">RESULTS</span>
                             </h2>
                         </div>
@@ -153,7 +153,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-24">
                         <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Methodology</div>
-                        <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
+                        <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
                             OUR <span className="text-accent italic">PROCESS</span>
                         </h2>
                         <p className="text-xl text-gray-600 mt-6 max-w-2xl mx-auto font-medium">
@@ -199,7 +199,7 @@ export default function Home() {
             <section className="py-16 md:py-32 bg-primary text-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Client Feedback</div>
-                    <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-20">
+                    <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-20">
                         WHAT OUR <span className="text-accent italic">PARTNERS</span> SAY
                     </h2>
 
@@ -240,7 +240,7 @@ export default function Home() {
             <section className="py-16 md:py-32 bg-secondary overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Sectors</div>
-                    <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-20">
+                    <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-20">
                         INDUSTRIES WE <span className="text-accent italic">SERVE</span>
                     </h2>
 

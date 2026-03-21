@@ -89,12 +89,12 @@ export default function ServicesPage() {
                     className="text-center max-w-4xl mx-auto"
                 >
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Core Capabilities</div>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter leading-[0.9] text-primary mb-8 flex flex-col items-center">
+                    <h1 className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter leading-[0.95] text-primary mb-8 flex flex-col items-center">
                         <span>DIGITAL &</span>
                         <span className="text-accent italic">ENGINEERING</span>
                         <span>EXPERTISE</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-medium">
+                    <p className="text-lg md:text-2xl text-gray-600 leading-relaxed font-medium">
                         We don't offer generic templates or cookie-cutter drafting. We architect comprehensive, highly tailored solutions designed explicitly to accelerate your growth and streamline operational workflows.
                     </p>
                 </motion.div>
@@ -131,7 +131,7 @@ export default function ServicesPage() {
                             <div className="w-full lg:w-1/2 space-y-8">
                                 <div>
                                     <div className="text-sm font-bold uppercase tracking-widest text-accent mb-3">{service.subtitle}</div>
-                                    <h2 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight">{service.title}</h2>
+                                    <h2 className="text-3xl md:text-5xl font-extrabold text-primary leading-tight">{service.title}</h2>
                                 </div>
 
                                 <p className="text-xl text-gray-600 font-medium leading-relaxed">
@@ -162,7 +162,7 @@ export default function ServicesPage() {
             <section className="py-16 md:py-32 bg-primary text-white">
                 <div className="max-w-4xl mx-auto px-6">
                     <div className="text-center mb-20">
-                        <h2 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-6">FREQUENTLY ASKED</h2>
+                        <h2 className="text-3xl md:text-6xl font-extrabold tracking-tighter mb-6">FREQUENTLY ASKED</h2>
                         <p className="text-xl text-gray-400 font-medium">Common intelligence regarding our operational protocols.</p>
                     </div>
 
@@ -198,7 +198,7 @@ export default function ServicesPage() {
             {/* Global CTA */}
             <section className="py-24 bg-accent text-white text-center">
                 <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-8">Ready to Scale Your Operations?</h2>
+                    <h2 className="text-3xl md:text-6xl font-extrabold tracking-tighter mb-8">Ready to Scale Your Operations?</h2>
                     <p className="text-xl font-medium mb-10 text-white/90">
                         Let's bypass the buzzwords and calculate exactly how our engineering and digital stacks can aggressively augment your bottom line.
                     </p>

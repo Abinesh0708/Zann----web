@@ -11,7 +11,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                 >
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Get In Touch</div>
-                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-8">
+                    <h1 className="text-3xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-8">
                         WE'RE HERE TO <br />
                         <span className="text-accent italic">HELP YOU SCALE</span>
                     </h1>

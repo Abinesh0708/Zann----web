@@ -23,7 +23,7 @@ export default function Hero() {
             <span>Digital & Engineering</span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter leading-[0.9] text-primary mb-8 flex flex-col items-center">
+          <h1 className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter leading-[0.95] text-primary mb-8 flex flex-col items-center">
             <span>BUILD.</span>
             <span className="text-accent italic">AUTOMATE.</span>
             <span>SCALE.</span>

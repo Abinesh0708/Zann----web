@@ -13,13 +13,13 @@ export default function About() {
                     className="max-w-5xl"
                 >
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Who We Are</div>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter leading-[0.9] text-primary mb-8">
+                    <h1 className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter leading-[0.95] text-primary mb-8">
                         EMPOWERING <br />
                         BUSINESSES <br />
                         WITH <span className="text-accent italic">SMART</span> <br />
                         SOLUTIONS
                     </h1>
-                    <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-medium">
+                    <p className="text-lg md:text-2xl text-gray-600 leading-relaxed font-medium">
                         Zanntec is a premier technology-driven firm unconditionally focused on delivering high-quality digital architectures and engineering workflows. Founded with a vision to bridge the gap between heavy industry and modern software, we specialize in high-performance website development, CAD modeling, mechanical drafting, and systemic automation services specifically tailored to industrial, e-commerce, and enterprise business needs.
                     </p>
                 </motion.div>
@@ -43,7 +43,7 @@ export default function About() {
                                 transition={{ delay: i * 0.1 }}
                                 className="text-center"
                             >
-                                <div className="text-5xl md:text-6xl font-extrabold font-display text-accent mb-2">{stat.val}</div>
+                                <div className="text-4xl md:text-6xl font-extrabold font-display text-accent mb-2">{stat.val}</div>
                                 <div className="text-sm font-bold uppercase tracking-widest text-gray-400">{stat.label}</div>
                             </motion.div>
                         ))}
@@ -109,7 +109,7 @@ export default function About() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-20">
                         <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Principles</div>
-                        <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
+                        <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
                             OUR CORE <span className="text-accent italic">VALUES</span>
                         </h2>
                     </div>
@@ -144,7 +144,7 @@ export default function About() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-20">
                         <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Methodology</div>
-                        <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight">
+                        <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight">
                             HOW WE <span className="text-accent italic">OPERATE</span>
                         </h2>
                         <p className="text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed mt-6 text-xl">
