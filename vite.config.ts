@@ -19,6 +19,8 @@ export default defineConfig(({mode}) => {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
+      // Serve index.html for all routes so React Router handles them (fixes 404 on reload)
+      historyApiFallback: true,
     },
   };
 });
