@@ -15,7 +15,7 @@ export default function Home() {
     const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
     return (
-        <main>
+        <main className="overflow-hidden">
             <SEOHead
                 title="Zanntec | Engineering & Digital Solutions"
                 description="Zanntec empowers industrial and enterprise businesses with high-performance websites, CAD design & automation, and scalable e-commerce solutions. Start your project today."
@@ -79,53 +79,61 @@ export default function Home() {
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-primary">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="group cursor-pointer"
-                        >
-                            <div className="rounded-[40px] overflow-hidden mb-8 h-[400px] relative">
-                                <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10" />
-                                <img
-                                    src="/assets/ecommerce_platform.png"
-                                    alt="Web Development"
-                                    referrerPolicy="no-referrer"
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                />
-                            </div>
-                            <div className="space-y-4">
-                                <div className="text-sm font-bold uppercase tracking-widest text-accent">E-Commerce Scaling</div>
-                                <h3 className="text-3xl font-extrabold">Next-Gen Industrial Retail Platform</h3>
-                                <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-xl">
-                                    We engineered a completely bespoke e-commerce architecture capable of handling 100k+ concurrent users, integrated with legacy localized inventory management systems.
-                                </p>
-                            </div>
-                        </motion.div>
+                        <Link to="/case-study/ecommerce" className="block focus:outline-none focus-visible:ring-4 focus-visible:ring-accent rounded-[40px]">
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="group cursor-pointer"
+                            >
+                                <div className="rounded-[40px] overflow-hidden mb-8 h-[400px] relative">
+                                    <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10" />
+                                    <img
+                                        src="/assets/ecommerce_platform.png"
+                                        alt="Web Development"
+                                        referrerPolicy="no-referrer"
+                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                </div>
+                                <div className="space-y-4">
+                                    <div className="text-sm font-bold uppercase tracking-widest text-accent flex items-center gap-2">
+                                        E-Commerce Scaling <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0 duration-300" />
+                                    </div>
+                                    <h3 className="text-3xl font-extrabold group-hover:text-accent transition-colors">Next-Gen Industrial Retail Platform</h3>
+                                    <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-xl">
+                                        We engineered a completely bespoke e-commerce architecture capable of handling 100k+ concurrent users, integrated with legacy localized inventory management systems.
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </Link>
 
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="group cursor-pointer lg:mt-24"
-                        >
-                            <div className="rounded-[40px] overflow-hidden mb-8 h-[400px] relative">
-                                <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10" />
-                                <img
-                                    src="/assets/cad_automation.png"
-                                    alt="CAD Automation"
-                                    referrerPolicy="no-referrer"
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                />
-                            </div>
-                            <div className="space-y-4">
-                                <div className="text-sm font-bold uppercase tracking-widest text-accent">CAD VBA Automation</div>
-                                <h3 className="text-3xl font-extrabold">Automated Parametric Modeling</h3>
-                                <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-xl">
-                                    By developing custom SolidWorks macros embedded in VBA, we reduced manual modeling time by 85% for a top-tier manufacturing client, automating their repetitive geometric generations.
-                                </p>
-                            </div>
-                        </motion.div>
+                        <Link to="/case-study/cad-automation" className="block focus:outline-none focus-visible:ring-4 focus-visible:ring-accent rounded-[40px]">
+                            <motion.div
+                                initial={{ opacity: 0, x: 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="group cursor-pointer"
+                            >
+                                <div className="rounded-[40px] overflow-hidden mb-8 h-[400px] relative">
+                                    <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10" />
+                                    <img
+                                        src="/assets/cad_automation.png"
+                                        alt="CAD Automation"
+                                        referrerPolicy="no-referrer"
+                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                </div>
+                                <div className="space-y-4">
+                                    <div className="text-sm font-bold uppercase tracking-widest text-accent flex items-center gap-2">
+                                        CAD VBA Automation <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0 duration-300" />
+                                    </div>
+                                    <h3 className="text-3xl font-extrabold group-hover:text-accent transition-colors">Automated Parametric Modeling</h3>
+                                    <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-xl">
+                                        By developing custom SolidWorks macros embedded in VBA, we reduced manual modeling time by 85% for a top-tier manufacturing client, automating their repetitive geometric generations.
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </Link>
                     </div>
                 </div>
             </section>

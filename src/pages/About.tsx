@@ -4,7 +4,7 @@ import SEOHead from '../components/SEOHead';
 
 export default function About() {
     return (
-        <main className="pt-24 md:pt-32 pb-20 bg-white min-h-screen">
+        <main className="pt-24 md:pt-32 pb-20 bg-white min-h-screen overflow-hidden">
             <SEOHead
                 title="About Us | Zanntec"
                 description="Learn about Zanntec — a premier technology firm bridging heavy industry and modern software. 20+ engineers, 99% client retention, 500+ automated models, and 24/7 DevOps support."
@@ -19,7 +19,7 @@ export default function About() {
                     className="max-w-5xl"
                 >
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Who We Are</div>
-                    <h1 className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter leading-[0.95] text-primary mb-8">
+                    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-8">
                         EMPOWERING <br />
                         BUSINESSES <br />
                         WITH <span className="text-accent italic">SMART</span> <br />

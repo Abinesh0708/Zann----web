@@ -14,6 +14,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import ServicesPage from './pages/Services';
 import Contact from './pages/Contact';
+import CaseStudyEcommerce from './pages/CaseStudyEcommerce';
+import CaseStudyCAD from './pages/CaseStudyCAD';
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -72,6 +74,8 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/case-study/ecommerce" element={<CaseStudyEcommerce />} />
+        <Route path="/case-study/cad-automation" element={<CaseStudyCAD />} />
       </Routes>
 
       <Footer />

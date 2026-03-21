@@ -80,7 +80,7 @@ export default function ServicesPage() {
     const [openFaq, setOpenFaq] = useState<number | null>(0);
 
     return (
-        <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen">
+        <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen overflow-hidden">
             <SEOHead
                 title="Services | Zanntec — Website, CAD & E-Commerce Experts"
                 description="Explore Zanntec's full suite of services: website development, CMS & maintenance, e-commerce solutions, CAD design & drafting, and CAD automation. Precision-engineered for industry."
@@ -95,7 +95,7 @@ export default function ServicesPage() {
                     className="text-center max-w-4xl mx-auto"
                 >
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Core Capabilities</div>
-                    <h1 className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter leading-[0.95] text-primary mb-8 flex flex-col items-center">
+                    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-8 flex flex-col items-center">
                         <span>DIGITAL &</span>
                         <span className="text-accent italic">ENGINEERING</span>
                         <span>EXPERTISE</span>

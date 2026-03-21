@@ -7,7 +7,7 @@ interface SEOHeadProps {
   ogImage?: string;
 }
 
-const SITE_URL = 'https://zanntec.com';
+const SITE_URL = 'https://www.zanntec.org';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/assets/logo.png`;
 
 export default function SEOHead({
