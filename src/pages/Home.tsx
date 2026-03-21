@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
+import SEOHead from '../components/SEOHead';
 import { CheckCircle2, Factory, MonitorSmartphone, ShoppingCart, TrendingUp, Pickaxe, Building2, Star, Quote, ArrowRight } from 'lucide-react';
 
 export default function Home() {
@@ -15,6 +16,11 @@ export default function Home() {
 
     return (
         <main>
+            <SEOHead
+                title="Zanntec | Engineering & Digital Solutions"
+                description="Zanntec empowers industrial and enterprise businesses with high-performance websites, CAD design & automation, and scalable e-commerce solutions. Start your project today."
+                canonicalPath="/"
+            />
             <Hero />
 
             {/* Why Choose Zanntec Section */}

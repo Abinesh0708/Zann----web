@@ -1,9 +1,15 @@
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Clock, Globe2 } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 export default function Contact() {
     return (
         <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen">
+            <SEOHead
+                title="Contact Us | Zanntec"
+                description="Get in touch with Zanntec. Reach us by email at info@zanntec.com or call +91 82480 94054. Our engineering team is ready to help you scale your operations."
+                canonicalPath="/contact"
+            />
             {/* Header */}
             <section className="max-w-4xl mx-auto px-6 text-center mb-24">
                 <motion.div

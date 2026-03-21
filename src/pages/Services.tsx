@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Monitor, Code, ShoppingBag, PenTool, Cpu, ArrowRight, CheckCircle2, Plus } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 
 const services = [
     {
@@ -80,6 +81,11 @@ export default function ServicesPage() {
 
     return (
         <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen">
+            <SEOHead
+                title="Services | Zanntec — Website, CAD & E-Commerce Experts"
+                description="Explore Zanntec's full suite of services: website development, CMS & maintenance, e-commerce solutions, CAD design & drafting, and CAD automation. Precision-engineered for industry."
+                canonicalPath="/services"
+            />
 
             {/* Hero Header */}
             <section className="max-w-7xl mx-auto px-6 mb-16 md:mb-32">

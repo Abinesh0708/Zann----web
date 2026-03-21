@@ -1,9 +1,15 @@
 import { motion } from 'motion/react';
 import { Target, Eye, ShieldCheck, Zap, Users, Trophy, ChevronRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 export default function About() {
     return (
         <main className="pt-24 md:pt-32 pb-20 bg-white min-h-screen">
+            <SEOHead
+                title="About Us | Zanntec"
+                description="Learn about Zanntec — a premier technology firm bridging heavy industry and modern software. 20+ engineers, 99% client retention, 500+ automated models, and 24/7 DevOps support."
+                canonicalPath="/about"
+            />
 
             {/* Header Section */}
             <section className="max-w-7xl mx-auto px-6 mb-16 md:mb-24">
