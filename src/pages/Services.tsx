@@ -137,7 +137,7 @@ export default function ServicesPage() {
                             <div className="w-full lg:w-1/2 space-y-8">
                                 <div>
                                     <div className="text-sm font-bold uppercase tracking-widest text-accent mb-3">{service.subtitle}</div>
-                                    <h2 className="text-3xl md:text-5xl font-extrabold text-primary leading-tight">{service.title}</h2>
+                                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary leading-tight hyphens-auto">{service.title}</h2>
                                 </div>
 
                                 <p className="text-xl text-gray-600 font-medium leading-relaxed">
