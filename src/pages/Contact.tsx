@@ -7,7 +7,7 @@ export default function Contact() {
         <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen overflow-hidden">
             <SEOHead
                 title="Contact Us | Zanntec"
-                description="Get in touch with Zanntec. Reach us by email at info@zanntec.com or call +91 82480 94054. Our engineering team is ready to help you scale your operations."
+                description="Get in touch with Zanntec. Reach us by email at info@zanntec.org or call +91 82480 94054. Our engineering team is ready to help you scale your operations."
                 canonicalPath="/contact"
             />
             {/* Header */}
@@ -42,7 +42,7 @@ export default function Contact() {
                         </div>
                         <h3 className="text-2xl font-bold text-primary mb-2">Email Us</h3>
                         <p className="text-gray-600 font-medium mb-6">Reach out for sales, proposals, custom quotes, or general inquiries.</p>
-                        <a href="mailto:info@zanntec.com" className="text-xl font-bold text-primary hover:text-accent transition-colors truncate block">info@zanntec.com</a>
+                        <a href="mailto:info@zanntec.org" className="text-xl font-bold text-primary hover:text-accent transition-colors truncate block">info@zanntec.org</a>
                     </motion.div>
 
                     {/* Call Us */}

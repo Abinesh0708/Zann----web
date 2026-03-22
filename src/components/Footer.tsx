@@ -57,8 +57,8 @@ export default function Footer() {
             <div className="flex flex-col space-y-4">
               <div className="flex items-center gap-4 text-gray-400">
                 <Mail className="w-5 h-5 text-accent flex-shrink-0" />
-                <a href="mailto:info@zanntec.com" className="hover:text-white transition-colors">
-                  info@zanntec.com
+                <a href="mailto:info@zanntec.org" className="hover:text-white transition-colors">
+                  info@zanntec.org
                 </a>
               </div>
               <div className="flex items-center gap-4 text-gray-400">
