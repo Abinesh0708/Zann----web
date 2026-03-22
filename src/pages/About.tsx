@@ -71,7 +71,7 @@ export default function About() {
                             <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mb-8">
                                 <Target className="w-10 h-10 text-accent" />
                             </div>
-                            <h2 className="text-4xl font-extrabold text-primary mb-6">Our Mission</h2>
+                            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-6 break-words hyphens-auto">Our Mission</h2>
                             <p className="text-xl text-gray-600 leading-relaxed font-medium mb-8">
                                 To empower forward-thinking businesses with smart, scalable, and relentlessly efficient solutions. We achieve this through disciplined innovation, uncompromising precision, and the deployment of bleeding-edge technology.
                             </p>
@@ -93,7 +93,7 @@ export default function About() {
                             <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
                                 <Eye className="w-10 h-10 text-white" />
                             </div>
-                            <h2 className="text-4xl font-extrabold mb-6">Our Vision</h2>
+                            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 break-words hyphens-auto">Our Vision</h2>
                             <p className="text-xl text-gray-300 leading-relaxed font-medium mb-8">
                                 To become the universally recognized, most trusted global partner in digital transformation and engineering services. We envision a future where technology seamlessly amplifies human ingenuity securely and sustainably.
                             </p>
@@ -115,7 +115,7 @@ export default function About() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-20">
                         <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Principles</div>
-                        <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
+                        <h2 className="text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
                             OUR CORE <span className="text-accent italic">VALUES</span>
                         </h2>
                     </div>
@@ -150,7 +150,7 @@ export default function About() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-20">
                         <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Methodology</div>
-                        <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight">
                             HOW WE <span className="text-accent italic">OPERATE</span>
                         </h2>
                         <p className="text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed mt-6 text-xl">

@@ -28,7 +28,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-20">
                         <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Features</div>
-                        <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight">
                             WHY CHOOSE <br />
                             <span className="text-accent italic">ZANNTEC</span>
                         </h2>
@@ -69,7 +69,7 @@ export default function Home() {
                     <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
                         <div>
                             <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Case Studies</div>
-                            <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
+                            <h2 className="text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
                                 PROVEN <span className="text-accent italic">RESULTS</span>
                             </h2>
                         </div>
@@ -99,7 +99,7 @@ export default function Home() {
                                     <div className="text-sm font-bold uppercase tracking-widest text-accent flex items-center gap-2">
                                         E-Commerce Scaling <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0 duration-300" />
                                     </div>
-                                    <h3 className="text-3xl font-extrabold group-hover:text-accent transition-colors">Next-Gen Industrial Retail Platform</h3>
+                                    <h3 className="text-2xl md:text-3xl font-extrabold group-hover:text-accent transition-colors break-words hyphens-auto">Next-Gen Industrial Retail Platform</h3>
                                     <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-xl">
                                         We engineered a completely bespoke e-commerce architecture capable of handling 100k+ concurrent users, integrated with legacy localized inventory management systems.
                                     </p>
@@ -127,7 +127,7 @@ export default function Home() {
                                     <div className="text-sm font-bold uppercase tracking-widest text-accent flex items-center gap-2">
                                         CAD VBA Automation <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0 duration-300" />
                                     </div>
-                                    <h3 className="text-3xl font-extrabold group-hover:text-accent transition-colors">Automated Parametric Modeling</h3>
+                                    <h3 className="text-2xl md:text-3xl font-extrabold group-hover:text-accent transition-colors break-words hyphens-auto">Automated Parametric Modeling</h3>
                                     <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-xl">
                                         By developing custom SolidWorks macros embedded in VBA, we reduced manual modeling time by 85% for a top-tier manufacturing client, automating their repetitive geometric generations.
                                     </p>
@@ -153,7 +153,7 @@ export default function Home() {
                     />
                 </motion.div>
                 <div className="relative z-20 text-center px-6 max-w-4xl mx-auto">
-                    <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tighter mb-6">
+                    <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white tracking-tighter mb-6">
                         INNOVATION IN EVERY <span className="text-accent italic">DETAIL</span>
                     </h2>
                     <p className="text-xl text-gray-200 font-medium leading-relaxed">
@@ -167,7 +167,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-24">
                         <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Methodology</div>
-                        <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
+                        <h2 className="text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary">
                             OUR <span className="text-accent italic">PROCESS</span>
                         </h2>
                         <p className="text-xl text-gray-600 mt-6 max-w-2xl mx-auto font-medium">
@@ -199,7 +199,7 @@ export default function Home() {
                                         0{i + 1}
                                     </div>
                                     <div className="flex-1 pt-4">
-                                        <h3 className="text-3xl font-extrabold text-primary mb-4">{step.title}</h3>
+                                        <h3 className="text-2xl md:text-3xl font-extrabold text-primary mb-4 break-words hyphens-auto">{step.title}</h3>
                                         <p className="text-gray-600 font-medium text-xl leading-relaxed">{step.desc}</p>
                                     </div>
                                 </motion.div>
@@ -213,7 +213,7 @@ export default function Home() {
             <section className="py-16 md:py-32 bg-primary text-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Client Feedback</div>
-                    <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-20">
+                    <h2 className="text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-20">
                         WHAT OUR <span className="text-accent italic">PARTNERS</span> SAY
                     </h2>
 
@@ -254,7 +254,7 @@ export default function Home() {
             <section className="py-16 md:py-32 bg-secondary overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Sectors</div>
-                    <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-20">
+                    <h2 className="text-3xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-20">
                         INDUSTRIES WE <span className="text-accent italic">SERVE</span>
                     </h2>
 
@@ -283,7 +283,7 @@ export default function Home() {
                     </div>
 
                     <div className="mt-24">
-                        <h3 className="text-3xl font-extrabold text-primary mb-8">Ready to transform your industry?</h3>
+                        <h3 className="text-2xl sm:text-3xl font-extrabold text-primary mb-8">Ready to transform your industry?</h3>
                         <Link to="/contact" className="inline-flex items-center justify-center bg-primary text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-accent transition-all">
                             Initialize Project Today
                         </Link>

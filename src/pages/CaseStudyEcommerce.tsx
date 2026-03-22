@@ -27,7 +27,7 @@ export default function CaseStudyEcommerce() {
                             <span className="w-12 h-px bg-accent"></span>
                             <span>Retail Logistics</span>
                         </div>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
                             Next-Gen Industrial <br />
                             <span className="text-accent italic">Retail Platform</span>
                         </h1>
@@ -44,14 +44,14 @@ export default function CaseStudyEcommerce() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
                         <div className="lg:col-span-8 space-y-12">
                             <div>
-                                <h2 className="text-3xl font-extrabold mb-6 text-primary">The Challenge</h2>
+                                <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-primary break-words hyphens-auto">The Challenge</h2>
                                 <p className="text-lg text-gray-600 leading-relaxed font-medium">
                                     Our client, an international industrial supplier, was constrained by a monolithic legacy Magento instance. As their catalog grew past 150,000 SKUs distributed across 40 distinct regional warehouses, their platform suffered from severe performance degradation during high-traffic procurement periods. They needed a system capable of real-time inventory synchronization without sacrificing millisecond page load responses.
                                 </p>
                             </div>
                             
                             <div>
-                                <h2 className="text-3xl font-extrabold mb-6 text-primary">Our Architectural Approach</h2>
+                                <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-primary break-words hyphens-auto">Our Architectural Approach</h2>
                                 <p className="text-lg text-gray-600 leading-relaxed font-medium mb-8">
                                     We migrated their infrastructure entirely from the ground up, utilizing a decoupled "headless" architecture. By separating the React/Next.js frontend from the Node.js microservices backend, we established a deeply resilient operational structure.
                                 </p>
@@ -119,7 +119,7 @@ export default function CaseStudyEcommerce() {
             {/* CTA */}
             <section className="bg-accent py-20 md:py-32 text-center px-6">
                 <div className="max-w-3xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8">Ready to Scale Your Platform?</h2>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8">Ready to Scale Your Platform?</h2>
                     <p className="text-xl text-white/90 font-medium mb-10">
                         Stop letting legacy architecture hold your revenue captive. Let's architect your success.
                     </p>

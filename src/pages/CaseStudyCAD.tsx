@@ -27,7 +27,7 @@ export default function CaseStudyCAD() {
                             <span className="w-12 h-px bg-accent"></span>
                             <span>Manufacturing Tech</span>
                         </div>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
                             Automated Parametric <br />
                             <span className="text-accent italic">Modeling</span>
                         </h1>
@@ -44,14 +44,14 @@ export default function CaseStudyCAD() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
                         <div className="lg:col-span-8 space-y-12">
                             <div>
-                                <h2 className="text-3xl font-extrabold mb-6 text-primary">The Engineering Bottleneck</h2>
+                                <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-primary break-words hyphens-auto">The Engineering Bottleneck</h2>
                                 <p className="text-lg text-gray-600 leading-relaxed font-medium">
                                     Our client manufactures complex industrial robotic arm assemblies. Each custom client order required their engineering department to manually adjust hundreds of dimensions, mating geometry, and custom tolerances in SolidWorks. The average custom assembly required over 40 hours of repetitive CAD redesign before it could be pushed to CAM software for production, creating a massive bottleneck in delivery lead times.
                                 </p>
                             </div>
                             
                             <div>
-                                <h2 className="text-3xl font-extrabold mb-6 text-primary">The Automated Solution</h2>
+                                <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-primary break-words hyphens-auto">The Automated Solution</h2>
                                 <p className="text-lg text-gray-600 leading-relaxed font-medium mb-8">
                                     We didn't just simplify their geometry; we completely fully automated it. By tapping into the SolidWorks API via an advanced VBA wrapper, we built a standalone "Product Configurator."
                                 </p>
@@ -119,7 +119,7 @@ export default function CaseStudyCAD() {
             {/* CTA */}
             <section className="bg-accent py-20 md:py-32 text-center px-6">
                 <div className="max-w-3xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8">Ready to Automate Your Engineering?</h2>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8">Ready to Automate Your Engineering?</h2>
                     <p className="text-xl text-white/90 font-medium mb-10">
                         Stop drawing the same components over and over. Let's build your automation engine.
                     </p>
