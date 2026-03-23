@@ -15,7 +15,7 @@ export default function CaseStudyEcommerce() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/90 to-primary" />
                 </div>
-                
+
                 <div className="relative z-10 max-w-7xl mx-auto px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -49,7 +49,7 @@ export default function CaseStudyEcommerce() {
                                     Our client, an international industrial supplier, was constrained by a monolithic legacy Magento instance. As their catalog grew past 150,000 SKUs distributed across 40 distinct regional warehouses, their platform suffered from severe performance degradation during high-traffic procurement periods. They needed a system capable of real-time inventory synchronization without sacrificing millisecond page load responses.
                                 </p>
                             </div>
-                            
+
                             <div>
                                 <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-primary break-words hyphens-auto">Our Architectural Approach</h2>
                                 <p className="text-lg text-gray-600 leading-relaxed font-medium mb-8">
