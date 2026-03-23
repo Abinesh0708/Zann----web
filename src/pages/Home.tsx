@@ -258,7 +258,7 @@ export default function Home() {
                         INDUSTRIES WE <span className="text-accent italic">SERVE</span>
                     </h2>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-6">
                         {[
                             { name: 'Engineering & Manufacturing', icon: Factory },
                             { name: 'Mining & Industrial', icon: Pickaxe },
@@ -272,12 +272,12 @@ export default function Home() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="group p-8 rounded-[30px] bg-white border border-gray-100 flex flex-col items-center justify-center gap-6 hover:bg-primary transition-colors shadow-sm cursor-pointer"
+                                className="group px-2 py-5 sm:p-4 md:p-8 rounded-[30px] bg-white border border-gray-100 flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-6 hover:bg-primary transition-colors shadow-sm cursor-pointer text-center box-border"
                             >
-                                <div className="bg-secondary group-hover:bg-white/10 p-6 rounded-full transition-colors">
-                                    <industry.icon className="w-8 h-8 text-accent" />
+                                <div className="bg-secondary group-hover:bg-white/10 p-3 sm:p-4 md:p-6 rounded-full transition-colors shrink-0">
+                                    <industry.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-accent" />
                                 </div>
-                                <h3 className="font-bold text-primary group-hover:text-white transition-colors text-lg">{industry.name}</h3>
+                                <h3 className="font-bold text-primary group-hover:text-white transition-colors text-xs sm:text-sm md:text-lg leading-snug hyphens-auto break-words">{industry.name}</h3>
                             </motion.div>
                         ))}
                     </div>
