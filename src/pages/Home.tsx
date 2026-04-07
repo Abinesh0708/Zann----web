@@ -17,8 +17,8 @@ export default function Home() {
     return (
         <main className="overflow-hidden">
             <SEOHead
-                title="Zanntec | Enterprise Web Development & CAD Automation Services"
-                description="Zanntec empowers industrial and enterprise businesses with high-performance web development, e-commerce solutions, and expert CAD design & macro automation."
+                title="SolidWorks VBA Automation & B2B E-Commerce Solutions | Zanntec"
+                description="Zanntec specializes in parametric CAD modeling services, SolidWorks VBA macro development, and headless e-commerce platforms explicitly designed for manufacturing and heavy industry."
                 canonicalPath="/"
             />
             <Hero />

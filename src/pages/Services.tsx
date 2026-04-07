@@ -82,8 +82,8 @@ export default function ServicesPage() {
     return (
         <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen overflow-hidden">
             <SEOHead
-                title="Our Services | Web Development, E-Commerce & CAD Design by Zanntec"
-                description="Explore Zanntec's services: Custom Website Development, Headless E-Commerce, UX/UI Design, CAD Drafting, and SolidWorks VBA Automation."
+                title="Parametric CAD Automation & Manufacturing Web Solutions | Zanntec"
+                description="Our highly-specialized services include rule-based SolidWorks design logic, industrial B2B portal design, headless web stores, and precise architectural drafting."
                 canonicalPath="/services"
             />
 

@@ -6,8 +6,8 @@ export default function About() {
     return (
         <main className="pt-24 md:pt-32 pb-20 bg-white min-h-screen overflow-hidden">
             <SEOHead
-                title="About Zanntec | High-Performance Digital & Engineering Architects"
-                description="Learn about Zanntec. We bridge heavy industry and modern software with 20+ top-tier engineers delivering premium web platforms, CMS, and CAD automation."
+                title="Industrial Web Development & Technical Engineering Agency | Zanntec"
+                description="Discover Zanntec. We are a technical engineering agency providing custom B2B CMS development, secure web infrastructure, and specialized 3D drafting for industrial sectors."
                 canonicalPath="/about"
             />
 
