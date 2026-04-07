@@ -6,8 +6,8 @@ export default function Contact() {
     return (
         <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen overflow-hidden">
             <SEOHead
-                title="Contact Us | Zanntec"
-                description="Get in touch with Zanntec. Reach us by email at info@zanntec.org or call +91 82480 94054. Our engineering team is ready to help you scale your operations."
+                title="Contact Zanntec | Expert Engineering & Digital Solutions"
+                description="Get in touch with Zanntec's engineering team today. Call +91 82480 94054 or email info@zanntec.org for custom software, web dev, and CAD proposals."
                 canonicalPath="/contact"
             />
             {/* Header */}
