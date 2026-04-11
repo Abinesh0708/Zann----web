@@ -3,12 +3,41 @@ import { Mail, Phone, MapPin, Clock, Globe2 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 export default function Contact() {
+    const contactJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Zanntec - Web Development Company in Nagercoil",
+        "description": "Contact Zanntec for web development, CAD automation, and SEO services in Nagercoil, Tirunelveli, and Tamil Nadu. Get a free consultation today.",
+        "url": "https://www.zanntec.org/contact",
+        "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Zanntec",
+            "telephone": "+91-82480-94054",
+            "email": "info@zanntec.org",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Nagercoil",
+                "addressRegion": "Tamil Nadu",
+                "addressCountry": "IN"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "8.1833",
+                "longitude": "77.4119"
+            },
+            "openingHours": "Mo-Fr 09:00-18:00",
+            "areaServed": ["Nagercoil", "Tirunelveli", "Tamil Nadu", "India"]
+        }
+    };
+
     return (
         <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen overflow-hidden">
             <SEOHead
-                title="Hire Expert SolidWorks Developers & B2B Web Engineers | Zanntec"
-                description="Contact Zanntec to hire specialized SolidWorks API developers and enterprise B2B web engineers. Call +91 82480 94054 for rapid technical macro solutions."
+                title="Contact Zanntec | Web Development & CAD Services in Nagercoil, Tamil Nadu"
+                description="Contact Zanntec for affordable website development, ecommerce solutions, SolidWorks CAD automation, and SEO services in Nagercoil, Tirunelveli, and Tamil Nadu. Call +91 82480 94054 for a free consultation."
                 canonicalPath="/contact"
+                keywords="web development company in nagercoil, digital marketing company tirunelveli, local seo company nagercoil, engineering service provider nagercoil, startup website development nagercoil, affordable website design tirunelveli, digital solutions company nagercoil"
+                jsonLd={contactJsonLd}
             />
             {/* Header */}
             <section className="max-w-4xl mx-auto px-6 text-center mb-24">
@@ -18,11 +47,11 @@ export default function Contact() {
                 >
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Get In Touch</div>
                     <h1 className="text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-8">
-                        WE'RE HERE TO <br />
-                        <span className="text-accent italic">HELP YOU SCALE</span>
+                        GET YOUR <br />
+                        <span className="text-accent italic">FREE CONSULTATION</span>
                     </h1>
                     <p className="text-xl text-gray-600 leading-relaxed font-medium">
-                        Whether you have a question about our engineering processes, pricing, or need technical support, our team is ready to answer all your questions.
+                        Whether you need a website for your business in Nagercoil, ecommerce development in Tirunelveli, CAD automation services, or SEO help in Tamil Nadu — our team is ready to help you scale.
                     </p>
                 </motion.div>
             </section>
@@ -41,7 +70,7 @@ export default function Contact() {
                             <Mail className="w-8 h-8 text-accent" />
                         </div>
                         <h3 className="text-2xl font-bold text-primary mb-2">Email Us</h3>
-                        <p className="text-gray-600 font-medium mb-6">Reach out for sales, proposals, custom quotes, or general inquiries.</p>
+                        <p className="text-gray-600 font-medium mb-6">Reach out for web development quotes, CAD automation inquiries, or SEO consultations.</p>
                         <a href="mailto:info@zanntec.org" className="text-xl font-bold text-primary hover:text-accent transition-colors truncate block">info@zanntec.org</a>
                     </motion.div>
 
@@ -57,11 +86,11 @@ export default function Contact() {
                             <Phone className="w-8 h-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold mb-2">Direct Line</h3>
-                        <p className="text-gray-300 font-medium mb-6">Need immediate technical assistance or have a pressing operational question?</p>
+                        <p className="text-gray-300 font-medium mb-6">Need immediate help with your website, ecommerce platform, or CAD project?</p>
                         <a href="tel:+918248094054" className="text-xl font-bold text-accent hover:text-white transition-colors">+91 82480 94054</a>
                     </motion.div>
 
-                    {/* Global Support */}
+                    {/* Location */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -70,11 +99,11 @@ export default function Contact() {
                         className="bg-secondary p-10 rounded-[40px] border border-gray-100 text-center hover:shadow-xl transition-all duration-300"
                     >
                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
-                            <Globe2 className="w-8 h-8 text-accent" />
+                            <MapPin className="w-8 h-8 text-accent" />
                         </div>
-                        <h3 className="text-2xl font-bold text-primary mb-2">Global Support</h3>
-                        <p className="text-gray-600 font-medium mb-6">Our engineering team is distributed to solve complex, mission-critical issues fast.</p>
-                        <div className="text-xl font-bold text-primary">Priority Handling</div>
+                        <h3 className="text-2xl font-bold text-primary mb-2">Our Location</h3>
+                        <p className="text-gray-600 font-medium mb-6">Serving businesses across Nagercoil, Tirunelveli, and all of Tamil Nadu, India.</p>
+                        <div className="text-xl font-bold text-primary">Nagercoil, Tamil Nadu</div>
                     </motion.div>
                 </div>
             </section>
@@ -95,7 +124,7 @@ export default function Contact() {
                                 <span className="text-accent italic">Reliable Support.</span>
                             </h2>
                             <p className="text-xl text-gray-300 font-medium leading-relaxed">
-                                We deliver uncompromising quality in every line of code and CAD model, ensuring your enterprise systems perform flawlessly.
+                                We deliver uncompromising quality in every website, admin dashboard, and CAD model. Whether you're a startup in Nagercoil or an enterprise in Tamil Nadu, our digital solutions are built to perform flawlessly.
                             </p>
                         </div>
 
@@ -103,18 +132,18 @@ export default function Contact() {
                             {[
                                 {
                                     icon: Globe2,
-                                    title: 'Uncompromising Quality',
-                                    desc: 'From digital architectures to mechanical drafting, we follow rigorous quality assurance protocols.',
+                                    title: 'Secure & Scalable',
+                                    desc: 'From secure website development to scalable ecommerce platforms, we follow rigorous quality assurance protocols for every project.',
                                 },
                                 {
                                     icon: Clock,
-                                    title: 'Rapid Execution',
-                                    desc: 'We deploy lean methodologies to deliver high-quality work without ever sacrificing detail.',
+                                    title: 'Fast Turnaround',
+                                    desc: 'We deploy lean methodologies to deliver fast loading websites and CAD automation solutions without ever sacrificing quality.',
                                 },
                                 {
                                     icon: Phone,
-                                    title: 'Dedicated Client Support',
-                                    desc: 'Mon – Fri: 9 AM – 6 PM IST. Emergency support available via our direct line for critical systems.',
+                                    title: 'Dedicated Support',
+                                    desc: 'Mon – Fri: 9 AM – 6 PM IST. Website maintenance services and emergency support available via our direct line for critical systems.',
                                 },
                             ].map(({ icon: Icon, title, desc }) => (
                                 <div key={title} className="flex flex-col items-center text-center">

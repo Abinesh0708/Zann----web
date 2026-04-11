@@ -1,36 +1,36 @@
 import { motion } from 'motion/react';
-import { Layout, Search, Megaphone, Smartphone, Code, Palette } from 'lucide-react';
+import { Layout, Search, Megaphone, Smartphone, Code, Settings } from 'lucide-react';
 
 const services = [
   {
-    icon: Layout,
-    title: 'UI/UX Design',
-    description: 'We create intuitive and visually appealing user interfaces that provide a seamless user experience.',
-  },
-  {
     icon: Code,
     title: 'Web Development',
-    description: 'Our team builds high-performance, responsive websites using the latest technologies.',
+    description: 'We are a trusted web development company offering responsive, fast-loading, and SEO-optimized website development services for startups, small businesses, and enterprises across India.',
+  },
+  {
+    icon: Layout,
+    title: 'E-Commerce Solutions',
+    description: 'Custom ecommerce website development designed for local shops and businesses. We build scalable, high-converting online stores with secure payment gateways and inventory management.',
+  },
+  {
+    icon: Settings,
+    title: 'CAD Automation',
+    description: 'Industry-leading CAD automation services including SolidWorks macro automation, CAD workflow optimization, and design automation for manufacturing companies across India.',
   },
   {
     icon: Smartphone,
-    title: 'Mobile Apps',
-    description: 'We design and develop cross-platform mobile applications that engage users on the go.',
-  },
-  {
-    icon: Megaphone,
-    title: 'Digital Marketing',
-    description: 'We help brands reach their target audience through strategic digital marketing campaigns.',
+    title: 'Admin Dashboards',
+    description: 'Custom admin dashboard development for business management. We build powerful admin panel websites with real-time analytics, user management, and scalable backend architecture.',
   },
   {
     icon: Search,
-    title: 'SEO Optimization',
-    description: 'We optimize your website to rank higher on search engines and drive organic traffic.',
+    title: 'SEO Services',
+    description: 'Local SEO company providing comprehensive SEO services for small businesses. We help businesses in Nagercoil and Tamil Nadu rank higher on Google and drive organic traffic.',
   },
   {
-    icon: Palette,
-    title: 'Brand Identity',
-    description: 'We help brands define their unique identity and communicate their values effectively.',
+    icon: Megaphone,
+    title: 'UI/UX Design',
+    description: 'Professional UI UX design services in Tamil Nadu. We create mobile-friendly, intuitive interfaces with modern design practices that increase user engagement and conversions.',
   },
 ];
 
@@ -47,7 +47,7 @@ export default function Services() {
             </h2>
           </div>
           <p className="text-lg text-gray-600 max-w-md font-medium">
-            We offer a wide range of services to help your brand stand out in the digital landscape.
+            We provide SEO-optimized website development services designed to increase your online visibility, attract customers, and grow your business.
           </p>
         </div>
 

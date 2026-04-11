@@ -16,6 +16,13 @@ import ServicesPage from './pages/Services';
 import Contact from './pages/Contact';
 import CaseStudyEcommerce from './pages/CaseStudyEcommerce';
 import CaseStudyCAD from './pages/CaseStudyCAD';
+import NagercoilWebDevelopment from './pages/NagercoilWebDevelopment';
+import TirunelveliWebDesign from './pages/TirunelveliWebDesign';
+import TamilNaduSEOServices from './pages/TamilNaduSEOServices';
+import Blog from './pages/Blog';
+import BlogWhyBusinessNeedsWebsite from './pages/BlogWhyBusinessNeedsWebsite';
+import BlogHowEcommerceWorks from './pages/BlogHowEcommerceWorks';
+import BlogHowCMSWorks from './pages/BlogHowCMSWorks';
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -76,6 +83,13 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/case-study/ecommerce" element={<CaseStudyEcommerce />} />
         <Route path="/case-study/cad-automation" element={<CaseStudyCAD />} />
+        <Route path="/nagercoil-web-development" element={<NagercoilWebDevelopment />} />
+        <Route path="/tirunelveli-web-design" element={<TirunelveliWebDesign />} />
+        <Route path="/tamilnadu-seo-services" element={<TamilNaduSEOServices />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/why-every-business-needs-website-2026" element={<BlogWhyBusinessNeedsWebsite />} />
+        <Route path="/blog/how-ecommerce-works-complete-guide" element={<BlogHowEcommerceWorks />} />
+        <Route path="/blog/how-cms-works-guide-for-businesses" element={<BlogHowCMSWorks />} />
       </Routes>
 
       <Footer />

@@ -14,12 +14,34 @@ export default function Home() {
 
     const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
+    const homeJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Web Development Company in Nagercoil | CAD Automation Services India | Zanntec",
+        "description": "Zanntec is a leading web development company in Nagercoil, Tamil Nadu offering affordable website design, ecommerce website development, SolidWorks CAD automation, SEO services, and digital transformation solutions for businesses across India.",
+        "url": "https://www.zanntec.org/",
+        "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Zanntec",
+            "url": "https://www.zanntec.org",
+            "telephone": "+91-82480-94054",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Nagercoil",
+                "addressRegion": "Tamil Nadu",
+                "addressCountry": "IN"
+            }
+        }
+    };
+
     return (
         <main className="overflow-hidden">
             <SEOHead
-                title="SolidWorks VBA Automation & B2B E-Commerce Solutions | Zanntec"
-                description="Zanntec specializes in parametric CAD modeling services, SolidWorks VBA macro development, and headless e-commerce platforms explicitly designed for manufacturing and heavy industry."
+                title="Web Development Company in Nagercoil | CAD Automation & SEO Services | Zanntec"
+                description="Zanntec is a leading web development company in Nagercoil, Tamil Nadu. We offer affordable website design, ecommerce website development, SolidWorks macro automation, custom admin dashboards, and SEO services for small businesses across Tirunelveli and Tamil Nadu."
                 canonicalPath="/"
+                keywords="web development company in nagercoil, website design in tirunelveli, best web developer in tamil nadu, ecommerce website development nagercoil, affordable website design tirunelveli, CAD automation services India, SolidWorks macro automation services, local seo company nagercoil, digital marketing company tirunelveli, startup website development nagercoil, Zanntec web solutions"
+                jsonLd={homeJsonLd}
             />
             <Hero />
 
@@ -27,24 +49,24 @@ export default function Home() {
             <section className="py-16 md:py-32 bg-primary text-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-20">
-                        <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Features</div>
+                        <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Why Zanntec</div>
                         <h2 className="text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight">
                             WHY CHOOSE <br />
                             <span className="text-accent italic">ZANNTEC</span>
                         </h2>
                         <p className="text-xl text-gray-400 mt-6 max-w-2xl mx-auto">
-                            We stand apart by blending deep industry expertise with cutting-edge digital innovation to drive measurable outcomes for your business.
+                            As the best startup tech company in Tamil Nadu, we blend deep industry expertise with cutting-edge digital innovation to deliver scalable website solutions for your business.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { title: "Professional & Industry-Focused Solutions", desc: "Our solutions are tailored specifically to the nuanced needs of the engineering, manufacturing, and technical sectors." },
-                            { title: "High Precision Engineering Support", desc: "From complex 3D CAD modeling to detailed assembly outlines, we guarantee uncompromising accuracy." },
-                            { title: "Scalable Digital Services", desc: "Our web and e-commerce platforms are built to grow alongside your expanding customer base and operations." },
-                            { title: "Fast Turnaround Time", desc: "We deploy lean methodologies to deliver high-quality work rapidly without ever sacrificing detail." },
-                            { title: "Cost-Effective Solutions", desc: "Our automation pipelines reduce manual labor hours, directly converting to significant cost savings." },
-                            { title: "Dedicated Client Support", desc: "We provide round-the-clock maintenance, regular check-ins, and proactive troubleshooting for our partners." }
+                            { title: "SEO-Optimized Website Development", desc: "Every website we build is fully SEO optimized — from fast loading speeds to mobile-friendly design — ensuring your business ranks higher on Google India." },
+                            { title: "Industrial CAD Automation Expertise", desc: "From SolidWorks macro automation to CAD workflow optimization, we deliver automation solutions for mechanical design that reduce production time by up to 85%." },
+                            { title: "Scalable E-Commerce Solutions", desc: "Our ecommerce website development services are built to grow alongside your expanding customer base, with custom admin dashboards and real-time inventory management." },
+                            { title: "Fast Turnaround Time", desc: "We deploy lean methodologies to deliver high-quality, fast loading website development — from responsive websites to custom admin panels — rapidly without sacrificing detail." },
+                            { title: "Affordable & Cost-Effective", desc: "We offer affordable website design services in Tirunelveli and Nagercoil. Our automation pipelines reduce manual labor hours, converting directly to significant cost savings for your business." },
+                            { title: "Dedicated Local Support", desc: "As an engineering service provider in Nagercoil, we provide round-the-clock website maintenance services, regular check-ins, and proactive troubleshooting for all our partners across Tamil Nadu." }
                         ].map((feature, i) => (
                             <motion.div
                                 key={i}
@@ -89,8 +111,8 @@ export default function Home() {
                                 <div className="rounded-[40px] overflow-hidden mb-8 h-[400px] relative">
                                     <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10" />
                                     <img
-                                        src="/assets/ecommerce_platform.png"
-                                        alt="Web Development"
+                                        src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2500&auto=format&fit=crop"
+                                        alt="Ecommerce Website Development - Scalable E-Commerce Platform by Zanntec"
                                         referrerPolicy="no-referrer"
                                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                     />
@@ -99,9 +121,9 @@ export default function Home() {
                                     <div className="text-sm font-bold uppercase tracking-widest text-accent flex items-center gap-2">
                                         E-Commerce Scaling <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0 duration-300" />
                                     </div>
-                                    <h3 className="text-2xl md:text-3xl font-extrabold group-hover:text-accent transition-colors break-words hyphens-auto">Next-Gen Industrial Retail Platform</h3>
+                                    <h3 className="text-2xl md:text-3xl font-extrabold group-hover:text-accent transition-colors break-words hyphens-auto">Next-Gen Industrial E-Commerce Platform</h3>
                                     <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-xl">
-                                        We engineered a completely bespoke e-commerce architecture capable of handling 100k+ concurrent users, integrated with legacy localized inventory management systems.
+                                        We engineered a high-converting, scalable ecommerce website for local shops and industrial businesses, capable of handling 100k+ concurrent users with integrated inventory management systems.
                                     </p>
                                 </div>
                             </motion.div>
@@ -117,8 +139,8 @@ export default function Home() {
                                 <div className="rounded-[40px] overflow-hidden mb-8 h-[400px] relative">
                                     <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10" />
                                     <img
-                                        src="/assets/cad_automation.png"
-                                        alt="CAD Automation"
+                                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop"
+                                        alt="CAD Automation Services - SolidWorks Macro Automation by Zanntec"
                                         referrerPolicy="no-referrer"
                                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                     />
@@ -127,9 +149,9 @@ export default function Home() {
                                     <div className="text-sm font-bold uppercase tracking-widest text-accent flex items-center gap-2">
                                         CAD VBA Automation <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0 duration-300" />
                                     </div>
-                                    <h3 className="text-2xl md:text-3xl font-extrabold group-hover:text-accent transition-colors break-words hyphens-auto">Automated Parametric Modeling</h3>
+                                    <h3 className="text-2xl md:text-3xl font-extrabold group-hover:text-accent transition-colors break-words hyphens-auto">Automated Parametric CAD Modeling</h3>
                                     <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-xl">
-                                        By developing custom SolidWorks macros embedded in VBA, we reduced manual modeling time by 85% for a top-tier manufacturing client, automating their repetitive geometric generations.
+                                        By developing custom SolidWorks macros and CAD design automation for manufacturing, we reduced manual modeling time by 85% for a top-tier manufacturing client — a showcase of our engineering CAD services in Tamil Nadu.
                                     </p>
                                 </div>
                             </motion.div>
@@ -146,8 +168,8 @@ export default function Home() {
                 >
                     <div className="absolute inset-0 bg-primary/40 z-10" />
                     <img
-                        src="/assets/parallax_engineering.png"
-                        alt="Engineering Parallax"
+                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2569&auto=format&fit=crop"
+                        alt="Industrial Web Development and CAD Engineering Solutions"
                         referrerPolicy="no-referrer"
                         className="w-full h-[150%] object-cover object-center"
                     />
@@ -157,7 +179,7 @@ export default function Home() {
                         INNOVATION IN EVERY <span className="text-accent italic">DETAIL</span>
                     </h2>
                     <p className="text-xl text-gray-200 font-medium leading-relaxed">
-                        We don't just build software or draw models. We architect comprehensive blueprints for your corporate success, bringing visions into reality.
+                        We don't just build software or draw models. We architect comprehensive digital transformation solutions — combining web development and CAD automation to bring your business visions into reality.
                     </p>
                 </div>
             </section>
@@ -171,7 +193,7 @@ export default function Home() {
                             OUR <span className="text-accent italic">PROCESS</span>
                         </h2>
                         <p className="text-xl text-gray-600 mt-6 max-w-2xl mx-auto font-medium">
-                            We follow a strict, iterative blueprint ensuring transparency, agility, and uncompromising quality at every step of the journey.
+                            From requirement analysis to deployment, we follow a strict, iterative blueprint ensuring transparency, agility, and uncompromising quality. Our website development process is optimized for fast loading, secure, and high-converting results.
                         </p>
                     </div>
 
@@ -181,11 +203,11 @@ export default function Home() {
 
                         <div className="space-y-16">
                             {[
-                                { title: 'Requirement Analysis', desc: 'We begin with deep-dive technical workshops to fully understand your operational pain points and delineate clear project success metrics.' },
-                                { title: 'Planning & Strategy', desc: 'Our architects develop wireframes, system layouts, and comprehensive sprint timelines ensuring total alignment before a single line of code is written or geometry sketched.' },
-                                { title: 'Design & Development', desc: 'Our cross-functional teams execute the blueprint with precision, ensuring performance optimization and adherence to industry best practices.' },
-                                { title: 'Testing & Optimization', desc: 'Rigorous QA protocols, stress testing, and code reviews guarantee rock-solid stability and zero-defect delivery.' },
-                                { title: 'Delivery & Support', desc: 'Deployment is just the beginning. We provide complete hand-off documentation and ongoing telemetry-driven support to ensure continuous uptime.' },
+                                { title: 'Requirement Analysis', desc: 'We begin with deep-dive technical workshops to fully understand your operational pain points, business goals, and target audience — whether you need a startup website development in Nagercoil or an industrial CAD automation solution.' },
+                                { title: 'Planning & Strategy', desc: 'Our architects develop wireframes, UI/UX designs, SEO strategies, and comprehensive sprint timelines — ensuring total alignment before development begins. We plan for responsive, mobile-friendly website design from day one.' },
+                                { title: 'Design & Development', desc: 'Our cross-functional teams execute the blueprint with precision, building SEO-optimized, fast-loading websites and custom admin dashboards using modern frameworks like React and Next.js.' },
+                                { title: 'Testing & Optimization', desc: 'Rigorous QA protocols, performance testing, and SEO audits guarantee your website loads fast, ranks higher on Google India, and converts visitors into customers.' },
+                                { title: 'Delivery & Support', desc: 'Deployment is just the beginning. We provide complete website maintenance services including security patches, performance monitoring, and ongoing support for businesses across Tamil Nadu.' },
                             ].map((step, i) => (
                                 <motion.div
                                     key={i}
@@ -219,9 +241,9 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
                         {[
-                            { name: "Sarah Jenkins", role: "CTO, TechBuild Manufacturing", text: "Zanntec completely revolutionized our CAD drafting pipeline. The VBA scripts they delivered cut our design iteration time in half." },
-                            { name: "Marcus Chen", role: "Founder, Apex Retail", text: "Scaling our E-Commerce platform seemed insurmountable until Zanntec's team rebuilt our backend architecture from the ground up." },
-                            { name: "Elena Rostova", role: "Director of IT, Global Logistics", text: "Their commitment to client support is unmatched. When we had a critical security update requirement, Zanntec had it resolved within the hour." }
+                            { name: "Sarah Jenkins", role: "CTO, TechBuild Manufacturing", text: "Zanntec completely revolutionized our CAD drafting pipeline. The SolidWorks VBA automation scripts they delivered cut our design iteration time in half. Best CAD automation services in India." },
+                            { name: "Marcus Chen", role: "Founder, Apex Retail", text: "Scaling our E-Commerce platform seemed insurmountable until Zanntec's team rebuilt our backend architecture. Their ecommerce website development expertise is unmatched." },
+                            { name: "Elena Rostova", role: "Director of IT, Global Logistics", text: "Their commitment to client support is unmatched. When we had a critical security update requirement, Zanntec had it resolved within the hour. Truly a secure website development company." }
                         ].map((t, i) => (
                             <motion.div
                                 key={i}
@@ -281,13 +303,19 @@ export default function Home() {
                             </motion.div>
                         ))}
                     </div>
+                </div>
+            </section>
 
-                    <div className="mt-24">
-                        <h3 className="text-2xl sm:text-3xl font-extrabold text-primary mb-8">Ready to transform your industry?</h3>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-primary text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-accent transition-all">
-                            Initialize Project Today
-                        </Link>
-                    </div>
+            {/* CTA Section */}
+            <section className="py-16 md:py-24 bg-accent text-white text-center overflow-hidden">
+                <div className="max-w-4xl mx-auto px-6">
+                    <h2 className="text-3xl md:text-6xl font-extrabold tracking-tighter mb-8">Ready to Transform Your Business?</h2>
+                    <p className="text-xl font-medium mb-10 text-white/90">
+                        Whether you need a responsive website, an ecommerce platform, or CAD automation solutions — let's discuss how our digital services can grow your business in Tamil Nadu and beyond.
+                    </p>
+                    <Link to="/contact" className="inline-flex items-center justify-center bg-white text-primary px-10 py-5 rounded-full text-xl font-bold hover:bg-secondary transition-all shadow-lg hover:shadow-xl">
+                        Get Free Consultation
+                    </Link>
                 </div>
             </section>
         </main>

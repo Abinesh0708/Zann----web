@@ -8,6 +8,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -32,13 +33,13 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4',
-        isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-3' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-[100] transition-all duration-300 px-6 py-4',
+        isScrolled ? 'bg-white/90 backdrop-blur-3xl shadow-sm py-3' : 'bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex flex-col justify-center items-start">
-          <img src="/assets/logo.png" alt="Zanntec Logo" className="h-[72px] md:h-[96px] w-auto drop-shadow-sm transition-all duration-300" />
+          <img src="/assets/logo.png" alt="Zanntec Logo" className="h-[72px] md:h-[96px] w-auto drop-shadow-sm transition-all duration-300 brightness-0" />
         </Link>
 
         {/* Desktop Nav */}

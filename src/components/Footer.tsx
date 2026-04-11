@@ -6,8 +6,15 @@ const footerLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
   { name: 'Privacy Policy', href: '#' },
+];
+
+const locationLinks = [
+  { name: 'Web Development Nagercoil', href: '/nagercoil-web-development' },
+  { name: 'Website Design Tirunelveli', href: '/tirunelveli-web-design' },
+  { name: 'SEO Services Tamil Nadu', href: '/tamilnadu-seo-services' },
 ];
 
 export default function Footer() {
@@ -16,12 +23,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
 
-          <div className="space-y-6 lg:col-span-2">
+          <div className="space-y-6 lg:col-span-1">
             <Link to="/" className="inline-block w-fit">
-              <img src="/assets/logo.png" alt="Zanntec Logo" className="h-[80px] md:h-[120px] w-auto transition-all duration-300 brightness-0 invert opacity-90 hover:opacity-100" />
+              <img src="/assets/logo.png" alt="Zanntec - Web Development Company in Nagercoil" className="h-[80px] md:h-[120px] w-auto transition-all duration-300 brightness-0 invert opacity-90 hover:opacity-100" />
             </Link>
             <p className="text-gray-400 max-w-sm text-lg leading-relaxed">
-              Engineering Digital & CAD Solutions for Modern Businesses. We deliver innovative web solutions and engineering services.
+              Zanntec is a technology-driven company specializing in web development, CAD automation, and digital transformation solutions. We help businesses in Nagercoil, Tirunelveli, and across Tamil Nadu build scalable, high-performance digital platforms.
             </p>
             <div className="flex items-center gap-4 pt-4">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
@@ -53,6 +60,22 @@ export default function Footer() {
           </div>
 
           <div className="space-y-6">
+            <h4 className="text-xl font-bold">Service Areas</h4>
+            <div className="flex flex-col space-y-4">
+              {locationLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group w-fit"
+                >
+                  <ArrowRight className="w-4 h-4 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-6">
             <h4 className="text-xl font-bold">Contact Us</h4>
             <div className="flex flex-col space-y-4">
               <div className="flex items-center gap-4 text-gray-400">
@@ -70,7 +93,7 @@ export default function Footer() {
               <div className="flex items-start gap-4 text-gray-400">
                 <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                 <span>
-                  India
+                  Nagercoil, Tamil Nadu, India
                 </span>
               </div>
             </div>
@@ -78,13 +101,20 @@ export default function Footer() {
 
         </div>
 
-        <div className="pt-8 border-t border-white/10 text-center md:flex md:justify-between md:items-center">
-          <p className="text-sm text-gray-400 font-medium">
-            © 2026 Zanntec. All Rights Reserved.
-          </p>
-          <div className="mt-4 md:mt-0 space-x-6 text-sm text-gray-400 font-medium">
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+        <div className="pt-8 border-t border-white/10">
+          <div className="text-center mb-4">
+            <p className="text-sm text-gray-400 font-bold uppercase tracking-widest">
+              Nagercoil &nbsp;|&nbsp; Tirunelveli &nbsp;|&nbsp; Tamil Nadu
+            </p>
+          </div>
+          <div className="text-center md:flex md:justify-between md:items-center">
+            <p className="text-sm text-gray-400 font-medium">
+              © 2026 Zanntec. All Rights Reserved.
+            </p>
+            <div className="mt-4 md:mt-0 space-x-6 text-sm text-gray-400 font-medium">
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            </div>
           </div>
         </div>
       </div>
