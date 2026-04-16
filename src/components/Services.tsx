@@ -41,7 +41,7 @@ export default function Services() {
         <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
           <div className="max-w-2xl">
             <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Our Services</div>
-            <h2 className="text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight break-words hyphens-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight break-words hyphens-auto">
               WE PROVIDE <br />
               <span className="text-accent italic">CREATIVE</span> SOLUTIONS
             </h2>

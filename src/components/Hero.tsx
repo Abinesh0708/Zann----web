@@ -88,7 +88,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
             className="w-full mt-0 mb-2 md:mb-4 relative z-20"
           >
-            <h1 className="text-[2.5rem] leading-[1.1] sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] font-extrabold text-primary tracking-tight font-display md:leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary tracking-tight font-display leading-tight">
               Grow Your Business with<br className="hidden md:block" />
               <span className="text-accent"> Smart Digital Solutions</span>
             </h1>

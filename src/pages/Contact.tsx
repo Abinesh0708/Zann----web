@@ -46,7 +46,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                 >
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Get In Touch</div>
-                    <h1 className="text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-8">
+                    <h1 className="text-xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wider md:tracking-tighter leading-tight text-primary mb-8">
                         GET YOUR <br />
                         <span className="text-accent italic">FREE CONSULTATION</span>
                     </h1>

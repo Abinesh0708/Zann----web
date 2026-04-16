@@ -131,7 +131,7 @@ export default function ServicesPage() {
                     className="text-center max-w-4xl mx-auto"
                 >
                     <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Core Capabilities</div>
-                    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-8 flex flex-col items-center">
+                    <h1 className="text-xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wider md:tracking-tighter leading-tight text-primary mb-8 flex flex-col items-center w-full">
                         <span>DIGITAL &</span>
                         <span className="text-accent italic">ENGINEERING</span>
                         <span>EXPERTISE</span>
@@ -173,7 +173,7 @@ export default function ServicesPage() {
                             <div className="w-full lg:w-1/2 space-y-8">
                                 <div>
                                     <div className="text-sm font-bold uppercase tracking-widest text-accent mb-3">{service.subtitle}</div>
-                                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary leading-tight hyphens-auto">{service.title}</h2>
+                                    <h2 className="text-2xl md:text-4xl font-extrabold text-primary leading-tight hyphens-auto">{service.title}</h2>
                                 </div>
 
                                 <p className="text-xl text-gray-600 font-medium leading-relaxed">
@@ -204,7 +204,7 @@ export default function ServicesPage() {
             <section className="py-16 md:py-32 bg-primary text-white">
                 <div className="max-w-4xl mx-auto px-6">
                     <div className="text-center mb-20">
-                        <h2 className="text-3xl md:text-6xl font-extrabold tracking-tighter mb-6">FREQUENTLY ASKED</h2>
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tighter mb-6">FREQUENTLY ASKED</h2>
                         <p className="text-xl text-gray-400 font-medium">Common questions about our web development, CAD automation, and SEO services.</p>
                     </div>
 
@@ -240,7 +240,7 @@ export default function ServicesPage() {
             {/* Global CTA */}
             <section className="py-24 bg-accent text-white text-center">
                 <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-3xl md:text-6xl font-extrabold tracking-tighter mb-8">Ready to Scale Your Business?</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tighter mb-8">Ready to Scale Your Business?</h2>
                     <p className="text-xl font-medium mb-10 text-white/90">
                         Whether you need a responsive website, ecommerce platform, CAD automation, or SEO services — let's discuss how our digital solutions can grow your business in Nagercoil, Tirunelveli, and across Tamil Nadu.
                     </p>

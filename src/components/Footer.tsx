@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const footerLinks = [
@@ -31,13 +31,19 @@ export default function Footer() {
               Zanntec is a technology-driven company specializing in web development, CAD automation, and digital transformation solutions. We help businesses in Nagercoil, Tirunelveli, and across Tamil Nadu build scalable, high-performance digital platforms.
             </p>
             <div className="flex items-center gap-4 pt-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
+              {[
+                { Icon: Facebook, href: '#' },
+                { Icon: Instagram, href: 'https://www.instagram.com/zanntec/' },
+                { Icon: Linkedin, href: 'https://www.linkedin.com/company/zanntec/?viewAsMember=true' }
+              ].map((social, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={social.href}
+                  target={social.href !== '#' ? "_blank" : undefined}
+                  rel={social.href !== '#' ? "noopener noreferrer" : undefined}
                   className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all duration-300"
                 >
-                  <Icon className="w-4 h-4" />
+                  <social.Icon className="w-4 h-4" />
                 </a>
               ))}
             </div>
