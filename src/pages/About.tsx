@@ -7,7 +7,7 @@ export default function About() {
         "@context": "https://schema.org",
         "@type": "AboutPage",
         "name": "About Zanntec - Best Startup Tech Company in Tamil Nadu",
-        "description": "Zanntec is a technology-driven company specializing in web development, CAD automation, and digital transformation solutions. We help businesses in Nagercoil, Tirunelveli, and across Tamil Nadu build scalable, high-performance digital platforms.",
+        "description": "Zanntec is a technology-driven company specializing in web development, ecommerce solutions, and digital transformation services. We help businesses in Nagercoil, Tirunelveli, and across Tamil Nadu build scalable, high-performance digital platforms.",
         "url": "https://www.zanntec.org/about",
         "mainEntity": {
             "@type": "Organization",
@@ -25,9 +25,9 @@ export default function About() {
         <main className="pt-24 md:pt-32 pb-20 bg-white min-h-screen overflow-hidden">
             <SEOHead
                 title="About Zanntec | Best Startup Tech Company in Tamil Nadu | Digital Solutions Nagercoil"
-                description="Zanntec is a technology-driven company specializing in web development, CAD automation, and digital transformation solutions. We help businesses in Nagercoil, Tirunelveli, and across Tamil Nadu build scalable, high-performance digital platforms."
+                description="Zanntec is a technology-driven company specializing in web development, ecommerce solutions, and digital transformation services. We help businesses in Nagercoil, Tirunelveli, and across Tamil Nadu build scalable, high-performance digital platforms."
                 canonicalPath="/about"
-                keywords="best startup tech company tamil nadu, innovative tech company tamil nadu, digital solutions company nagercoil, engineering service provider nagercoil, web and CAD combined services India, manufacturing digital transformation services, engineering CAD services Tamil Nadu, Zanntec digital transformation, Zanntec services India"
+                keywords="best startup tech company tamil nadu, innovative tech company tamil nadu, digital solutions company nagercoil, web development company nagercoil, ecommerce website development, digital transformation services, Zanntec digital transformation, Zanntec services India"
                 jsonLd={aboutJsonLd}
             />
 
@@ -46,10 +46,10 @@ export default function About() {
                         SOLUTIONS
                     </h1>
                     <p className="text-lg md:text-2xl text-gray-600 leading-relaxed font-medium">
-                        Zanntec is a technology-driven company specializing in web development, CAD automation, and digital transformation solutions. We help businesses in Nagercoil, Tirunelveli, and across Tamil Nadu build scalable, high-performance digital platforms.
+                        Zanntec is a technology-driven company specializing in web development, ecommerce solutions, and digital transformation services. We help businesses in Nagercoil, Tirunelveli, and across Tamil Nadu build scalable, high-performance digital platforms.
                     </p>
                     <p className="text-lg md:text-xl text-gray-500 leading-relaxed font-medium mt-6">
-                        As an innovative tech company in Tamil Nadu, we provide SEO-optimized website development services designed to increase your online visibility, attract customers, and grow your business. Our solutions are tailored for startups, small businesses, and industrial enterprises — combining web development, CAD design automation for manufacturing, and engineering CAD services to bridge the gap between heavy industry and modern software.
+                        As an innovative tech company in Tamil Nadu, we provide SEO-optimized website development services designed to increase your online visibility, attract customers, and grow your business. Our solutions are tailored for startups, small businesses, and industrial enterprises — combining web development, ecommerce platforms, and custom admin dashboards to bridge the gap between business operations and modern software.
                     </p>
                 </motion.div>
             </section>
@@ -61,7 +61,7 @@ export default function About() {
                         {[
                             { val: "20+", label: "Expert Engineers" },
                             { val: "99%", label: "Client Retention" },
-                            { val: "500+", label: "Models Automated" },
+                            { val: "500+", label: "Projects Delivered" },
                             { val: "24/7", label: "DevOps Support" }
                         ].map((stat, i) => (
                             <motion.div
@@ -96,7 +96,7 @@ export default function About() {
                             </div>
                             <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-6 break-words hyphens-auto">Our Mission</h2>
                             <p className="text-xl text-gray-600 leading-relaxed font-medium mb-8">
-                                To empower businesses across Nagercoil, Tirunelveli, and Tamil Nadu with smart, scalable, and cost-effective digital solutions. We achieve this through disciplined innovation in web development, CAD automation, and manufacturing digital transformation services.
+                                To empower businesses across Nagercoil, Tirunelveli, and Tamil Nadu with smart, scalable, and cost-effective digital solutions. We achieve this through disciplined innovation in web development, ecommerce platforms, and digital transformation services.
                             </p>
                             <ul className="space-y-4">
                                 {["Eliminate operational bottlenecks with automation", "Deliver affordable website design for small businesses", "Provide scalable website solutions for enterprises"].map((item, i) => (
@@ -118,10 +118,10 @@ export default function About() {
                             </div>
                             <h2 className="text-3xl md:text-4xl font-extrabold mb-6 break-words hyphens-auto">Our Vision</h2>
                             <p className="text-xl text-gray-300 leading-relaxed font-medium mb-8">
-                                To become the most trusted digital transformation partner in India, recognized as the best startup tech company in Tamil Nadu. We envision combining web and CAD services to seamlessly amplify human ingenuity for engineering companies worldwide.
+                                To become the most trusted digital transformation partner in India, recognized as the best startup tech company in Tamil Nadu. We envision building seamless web and digital solutions to amplify human ingenuity for businesses worldwide.
                             </p>
                             <ul className="space-y-4 text-gray-300">
-                                {["Pioneer AI-driven CAD automation in India", "Expand web solutions for engineering companies globally", "Lead manufacturing digital transformation services"].map((item, i) => (
+                                {["Pioneer AI-driven digital automation in India", "Expand web solutions for businesses globally", "Lead digital transformation services"].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-lg font-bold text-white">
                                         <ChevronRight className="w-5 h-5 text-accent" /> {item}
                                     </li>
@@ -145,7 +145,7 @@ export default function About() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { icon: Zap, title: "Velocity", desc: "Speed is a feature. We deliver fast loading website development and rapid CAD automation iterations without compromising structural integrity or security." },
+                            { icon: Zap, title: "Velocity", desc: "Speed is a feature. We deliver fast loading website development and rapid iterations without compromising structural integrity or security." },
                             { icon: ShieldCheck, title: "Integrity", desc: "Transparency in process and billing. As a secure website development company, what we promise is exactly what we architect, code, and deploy." },
                             { icon: Trophy, title: "Excellence", desc: "Good enough is never enough. We strictly adhere to elite engineering standards — delivering SEO-optimized, responsive, and high-converting digital solutions." }
                         ].map((val, i) => (
@@ -177,7 +177,7 @@ export default function About() {
                             HOW WE <span className="text-accent italic">OPERATE</span>
                         </h2>
                         <p className="text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed mt-6 text-xl">
-                            Our proprietary 3-phase engineering methodology ensures maximum efficiency, CAD workflow optimization, and robust website development solutions delivered on time.
+                            Our proprietary 3-phase engineering methodology ensures maximum efficiency, workflow optimization, and robust website development solutions delivered on time.
                         </p>
                     </div>
 
@@ -186,9 +186,9 @@ export default function About() {
                         <div className="hidden md:block absolute top-[50%] left-[15%] right-[15%] h-1 bg-white/10 -translate-y-1/2 z-0" />
 
                         {[
-                            { step: "01", title: "Discovery Archive", desc: "Rigorous technical auditing, requirement gathering, and architectural blueprinting for web, e-commerce, and CAD automation projects." },
+                            { step: "01", title: "Discovery Archive", desc: "Rigorous technical auditing, requirement gathering, and architectural blueprinting for web, e-commerce, and digital transformation projects." },
                             { step: "02", title: "Iterative Build", desc: "Agile sprints combining mechanical engineering principles with modern clean-code — building SEO-optimized, responsive website solutions." },
-                            { step: "03", title: "Scale & Automate", desc: "Deployment, performance testing, and implementing scalable systems for perpetual growth — from SolidWorks automation to admin dashboards." }
+                            { step: "03", title: "Scale & Automate", desc: "Deployment, performance testing, and implementing scalable systems for perpetual growth — from workflow automation to admin dashboards." }
                         ].map((phase, i) => (
                             <motion.div
                                 key={i}

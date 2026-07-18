@@ -11,7 +11,7 @@ interface SEOHeadProps {
 
 const SITE_URL = 'https://www.zanntec.org';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/assets/logo.png`;
-const DEFAULT_KEYWORDS = 'web development company in nagercoil, website design in tirunelveli, CAD automation services India, SolidWorks macro automation, ecommerce website development, SEO services Tamil Nadu, digital marketing company, Zanntec';
+const DEFAULT_KEYWORDS = 'web development company in nagercoil, website design in tirunelveli, ecommerce website development, SEO services Tamil Nadu, digital marketing company, admin dashboard development, UI UX design services, Zanntec';
 
 export default function SEOHead({
   title,

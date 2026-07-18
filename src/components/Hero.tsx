@@ -1,24 +1,24 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Code, Monitor, PenTool, Database, Cpu } from 'lucide-react';
+import { ArrowRight, Code, Monitor, PenTool, Database, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const CADFace = () => (
+const DigitalFace = () => (
   <div className="w-full h-full rounded-2xl bg-[#0a0a0d]/90 border border-accent/50 shadow-[0_0_80px_rgba(255,102,0,0.15)] flex flex-col p-6 overflow-hidden">
     <div
       className="absolute inset-0 opacity-20"
       style={{ backgroundImage: 'linear-gradient(rgba(255, 102, 0, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 102, 0, 0.5) 1px, transparent 1px)', backgroundSize: '20px 20px' }}
     />
     <div className="relative z-10 flex justify-between items-start mb-auto">
-      <Cpu className="w-8 h-8 text-accent" />
+      <Zap className="w-8 h-8 text-accent" />
       <span className="text-[10px] font-mono text-accent">SYS.CORE.01</span>
     </div>
     <div className="relative z-10 space-y-2 mt-auto">
-      <div className="text-xl font-bold text-white tracking-widest uppercase">CAD Automation</div>
+      <div className="text-xl font-bold text-white tracking-widest uppercase">Digital Solutions</div>
       <div className="h-1 w-12 bg-accent" />
       <div className="font-mono text-[10px] text-gray-400 mt-2 leading-tight">
-        SolidWorks API mapped.<br />
-        Generating toolpaths...<br />
-        <span className="text-accent animate-pulse">Running automation...</span>
+        Systems online.<br />
+        Building platforms...<br />
+        <span className="text-accent animate-pulse">Deploying solutions...</span>
       </div>
     </div>
   </div>
@@ -101,7 +101,7 @@ export default function Hero() {
             className="space-y-2 relative z-20"
           >
             <p className="text-lg md:text-xl text-gray-600 max-w-xl mx-auto md:mx-0 font-medium leading-relaxed">
-              Zanntec is a leading web development company in Nagercoil specializing in SEO-optimized website development, ecommerce solutions, SolidWorks macro automation, and digital transformation services.
+              Zanntec is a leading web development company in Nagercoil specializing in SEO-optimized website development, ecommerce solutions, custom admin dashboards, and digital transformation services.
             </p>
             <p className="text-sm md:text-base text-accent font-bold uppercase tracking-widest mt-2">
               Serving businesses across Tamil Nadu, India
@@ -145,9 +145,9 @@ export default function Hero() {
             <div className="absolute inset-4 rounded-full border border-primary/20" style={{ transform: "rotateY(60deg) rotateX(45deg) scale(1.3)" }} />
             <div className="absolute inset-8 rounded-full border-2 border-dotted border-gray-300/30" style={{ transform: "rotateZ(45deg) rotateY(70deg) scale(1.4)" }} />
 
-            {/* Back Layer: Dark CAD / Automation Blueprint */}
+            {/* Back Layer: Dark Digital / Automation Blueprint */}
             <DoubleSided className="absolute w-64 h-80" containerStyle={{ transform: "translateZ(-100px) translateX(40px)" }}>
-              <CADFace />
+              <DigitalFace />
             </DoubleSided>
 
             {/* Central Glowing Core Element */}

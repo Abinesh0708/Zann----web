@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Monitor, Code, ShoppingBag, PenTool, Cpu, ArrowRight, CheckCircle2, Plus } from 'lucide-react';
+import { Monitor, Code, ShoppingBag, ArrowRight, CheckCircle2, Plus } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
@@ -34,33 +34,13 @@ const services = [
         features: ['Inventory Synchronization', 'Custom Payment Gateways', 'Admin Dashboard Development', 'Conversion Rate Optimization'],
         image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2500&auto=format&fit=crop',
         reversed: false
-    },
-    {
-        id: "cad",
-        icon: PenTool,
-        title: 'CAD Design & Drafting',
-        subtitle: 'Engineering CAD Services Tamil Nadu',
-        desc: 'Leverage our precision-driven engineering CAD services in Tamil Nadu, tailored exclusively for high-stakes mechanical engineering, architectural, and industrial manufacturing applications. We produce pixel-perfect geometric blueprints compliant with international engineering standards (ISO/ASME/BS) — combining CAD design automation for manufacturing with expert drafting.',
-        features: ['Complex 3D Solid Modeling', 'Parametric 2D Drafting', 'BOM & Assembly Animations', 'Rapid Prototyping Ready'],
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop',
-        reversed: true
-    },
-    {
-        id: "automation",
-        icon: Cpu,
-        title: 'CAD Automation',
-        subtitle: 'SolidWorks Macro Automation Services',
-        desc: 'If you draw the same part multiple times, you are losing money. Our CAD automation services India help manufacturing companies automate repetitive design processes using SolidWorks macro automation, CAD workflow optimization, and automation solutions for mechanical design — generating thousands of part variations instantly from Excel configurations.',
-        features: ['SolidWorks API/VBA Control', 'Rule-Based Design Logic', 'Custom Macro Toolbars', 'Automated Drawing Generation'],
-        image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2670&auto=format&fit=crop',
-        reversed: false
     }
 ];
 
 const faqs = [
     {
         q: "How long does a typical website development project take?",
-        a: "A standard small business website takes around 4-6 weeks from requirement gathering to deployment. Complex ecommerce websites or custom CAD automation tools typically require 8-12 weeks depending on the scope. We offer the fastest turnaround for website development in Nagercoil and Tamil Nadu."
+        a: "A standard small business website takes around 4-6 weeks from requirement gathering to deployment. Complex ecommerce websites or custom admin dashboards typically require 8-12 weeks depending on the scope. We offer the fastest turnaround for website development in Nagercoil and Tamil Nadu."
     },
     {
         q: "How much does website development cost in Tamil Nadu?",
@@ -79,10 +59,6 @@ const faqs = [
         a: "A custom website is built from scratch specifically for your business needs, offering unique design, better SEO, faster loading, and full scalability. Template websites are pre-built and cheaper but limited in customization. For businesses serious about growth, custom website development is the better investment in India."
     },
     {
-        q: "What CAD software do you automate?",
-        a: "Our engineering team specializes in SolidWorks macro automation using VBA and the SolidWorks API/C# Interop. We also have expertise in AutoCAD and Autodesk Inventor automation workflows. Our CAD automation services help manufacturing companies in India reduce design time by up to 85%."
-    },
-    {
         q: "Can you help my business get more clients using a website?",
         a: "Absolutely. We build high-converting landing pages, implement SEO-optimized content strategies, and design clear call-to-action elements that turn website visitors into paying customers. Our clients in Nagercoil and Tirunelveli have seen 3x increase in online inquiries."
     }
@@ -95,8 +71,8 @@ export default function ServicesPage() {
         {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Web Development, CAD Automation & SEO Services | Zanntec",
-            "description": "Explore Zanntec's specialized services: responsive website development, ecommerce solutions, SolidWorks CAD automation, admin dashboard development, and SEO services for businesses in Nagercoil, Tirunelveli, and Tamil Nadu.",
+            "name": "Web Development & SEO Services | Zanntec",
+            "description": "Explore Zanntec's specialized services: responsive website development, ecommerce solutions, admin dashboard development, and SEO services for businesses in Nagercoil, Tirunelveli, and Tamil Nadu.",
             "url": "https://www.zanntec.org/services"
         },
         {
@@ -116,10 +92,10 @@ export default function ServicesPage() {
     return (
         <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen overflow-hidden">
             <SEOHead
-                title="Website Development & CAD Automation Services in Nagercoil, Tamil Nadu | Zanntec"
+                title="Website Development & Digital Services in Nagercoil, Tamil Nadu | Zanntec"
                 description="We provide SEO-optimized website development services designed to increase your online visibility, attract customers, and grow your business. Our solutions are tailored for startups, small businesses, and industrial enterprises in Nagercoil, Tirunelveli, and Tamil Nadu."
                 canonicalPath="/services"
-                keywords="responsive website design services India, SEO optimized website development, high converting landing page design India, admin panel website development, scalable website solutions for business, UI UX design services Tamil Nadu, fast loading website development India, mobile friendly website design service, website maintenance services India, secure website development company, CAD automation services India, SolidWorks macro automation services, ecommerce website development nagercoil"
+                keywords="responsive website design services India, SEO optimized website development, high converting landing page design India, admin panel website development, scalable website solutions for business, UI UX design services Tamil Nadu, fast loading website development India, mobile friendly website design service, website maintenance services India, secure website development company, ecommerce website development nagercoil"
                 jsonLd={combinedJsonLd}
             />
 
@@ -205,7 +181,7 @@ export default function ServicesPage() {
                 <div className="max-w-4xl mx-auto px-6">
                     <div className="text-center mb-20">
                         <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tighter mb-6">FREQUENTLY ASKED</h2>
-                        <p className="text-xl text-gray-400 font-medium">Common questions about our web development, CAD automation, and SEO services.</p>
+                        <p className="text-xl text-gray-400 font-medium">Common questions about our web development, ecommerce, and SEO services.</p>
                     </div>
 
                     <div className="space-y-4">
@@ -242,7 +218,7 @@ export default function ServicesPage() {
                 <div className="max-w-4xl mx-auto px-6">
                     <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tighter mb-8">Ready to Scale Your Business?</h2>
                     <p className="text-xl font-medium mb-10 text-white/90">
-                        Whether you need a responsive website, ecommerce platform, CAD automation, or SEO services — let's discuss how our digital solutions can grow your business in Nagercoil, Tirunelveli, and across Tamil Nadu.
+                        Whether you need a responsive website, ecommerce platform, admin dashboard, or SEO services — let's discuss how our digital solutions can grow your business in Nagercoil, Tirunelveli, and across Tamil Nadu.
                     </p>
                     <Link to="/contact" className="inline-flex items-center justify-center bg-white text-primary px-10 py-5 rounded-full text-xl font-bold hover:bg-secondary transition-all shadow-lg hover:shadow-xl">
                         Get Free Consultation

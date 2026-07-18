@@ -15,7 +15,7 @@ import About from './pages/About';
 import ServicesPage from './pages/Services';
 import Contact from './pages/Contact';
 import CaseStudyEcommerce from './pages/CaseStudyEcommerce';
-import CaseStudyCAD from './pages/CaseStudyCAD';
+
 import NagercoilWebDevelopment from './pages/NagercoilWebDevelopment';
 import TirunelveliWebDesign from './pages/TirunelveliWebDesign';
 import TamilNaduSEOServices from './pages/TamilNaduSEOServices';
@@ -82,7 +82,7 @@ export default function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/case-study/ecommerce" element={<CaseStudyEcommerce />} />
-        <Route path="/case-study/cad-automation" element={<CaseStudyCAD />} />
+
         <Route path="/nagercoil-web-development" element={<NagercoilWebDevelopment />} />
         <Route path="/tirunelveli-web-design" element={<TirunelveliWebDesign />} />
         <Route path="/tamilnadu-seo-services" element={<TamilNaduSEOServices />} />

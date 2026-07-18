@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Layout, Search, Megaphone, Smartphone, Code, Settings } from 'lucide-react';
+import { Layout, Search, Megaphone, Smartphone, Code } from 'lucide-react';
 
 const services = [
   {
@@ -11,11 +11,6 @@ const services = [
     icon: Layout,
     title: 'E-Commerce Solutions',
     description: 'Custom ecommerce website development designed for local shops and businesses. We build scalable, high-converting online stores with secure payment gateways and inventory management.',
-  },
-  {
-    icon: Settings,
-    title: 'CAD Automation',
-    description: 'Industry-leading CAD automation services including SolidWorks macro automation, CAD workflow optimization, and design automation for manufacturing companies across India.',
   },
   {
     icon: Smartphone,

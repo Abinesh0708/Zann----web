@@ -30,9 +30,9 @@ export default function TamilNaduSEOServices() {
         <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen overflow-hidden">
             <SEOHead
                 title="Best Web Developer in Tamil Nadu | SEO & Digital Marketing Services | Zanntec"
-                description="Zanntec is the best web developer in Tamil Nadu offering SEO services, website redesign, small business website services, manufacturing digital transformation, and engineering CAD services across Tamil Nadu, India."
+                description="Zanntec is the best web developer in Tamil Nadu offering SEO services, website redesign, small business website services, digital transformation, and admin dashboard development across Tamil Nadu, India."
                 canonicalPath="/tamilnadu-seo-services"
-                keywords="best web developer in tamil nadu, small business website services tamil nadu, website redesign services tamil nadu, SEO services tamil nadu, ecommerce website for local shops tamil nadu, manufacturing digital transformation services, engineering CAD services Tamil Nadu, innovative tech company tamil nadu, best startup tech company tamil nadu, website development cost in tamil nadu"
+                keywords="best web developer in tamil nadu, small business website services tamil nadu, website redesign services tamil nadu, SEO services tamil nadu, ecommerce website for local shops tamil nadu, digital transformation services, innovative tech company tamil nadu, best startup tech company tamil nadu, website development cost in tamil nadu"
                 jsonLd={pageJsonLd}
             />
 
@@ -79,7 +79,7 @@ export default function TamilNaduSEOServices() {
                         {[
                             { icon: Search, title: 'SEO Services', desc: 'Comprehensive SEO services for businesses across Tamil Nadu. We help you rank higher on Google India with local SEO, on-page optimization, and content strategy.' },
                             { icon: Globe2, title: 'Website Redesign', desc: 'Website redesign services in Tamil Nadu. We transform outdated websites into modern, fast-loading, mobile-friendly digital platforms that convert visitors into customers.' },
-                            { icon: TrendingUp, title: 'Digital Transformation', desc: 'Manufacturing digital transformation services for engineering companies. We combine web solutions with CAD automation to modernize industrial workflows across Tamil Nadu.' },
+                            { icon: TrendingUp, title: 'Digital Transformation', desc: 'Digital transformation services for businesses. We build modern web solutions, admin dashboards, and ecommerce platforms to modernize business workflows across Tamil Nadu.' },
                             { icon: BarChart3, title: 'Small Business Services', desc: 'Small business website services in Tamil Nadu. Affordable website development, ecommerce solutions, and SEO packages designed for startups and growing businesses.' }
                         ].map((service, i) => (
                             <motion.div
@@ -120,7 +120,7 @@ export default function TamilNaduSEOServices() {
                             "Website redesign services that improve Google rankings by 3x",
                             "Ecommerce website development for local Tamil Nadu shops",
                             "Manufacturing digital transformation for engineering companies",
-                            "Engineering CAD services combining web + CAD expertise",
+                            "Digital transformation combining web + dashboard expertise",
                             "Small business website packages with SEO included",
                             "Transparent pricing — website development cost in Tamil Nadu made clear"
                         ].map((item, i) => (

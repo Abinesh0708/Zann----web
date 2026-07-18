@@ -28,7 +28,7 @@ export default function Footer() {
               <img src="/assets/logo.png" alt="Zanntec - Web Development Company in Nagercoil" className="h-[80px] md:h-[120px] w-auto transition-all duration-300 brightness-0 invert opacity-90 hover:opacity-100" />
             </Link>
             <p className="text-gray-400 max-w-sm text-lg leading-relaxed">
-              Zanntec is a technology-driven company specializing in web development, CAD automation, and digital transformation solutions. We help businesses in Nagercoil, Tirunelveli, and across Tamil Nadu build scalable, high-performance digital platforms.
+              Zanntec is a technology-driven company specializing in web development, ecommerce solutions, and digital transformation services. We help businesses in Nagercoil, Tirunelveli, and across Tamil Nadu build scalable, high-performance digital platforms.
             </p>
             <div className="flex items-center gap-4 pt-4">
               {[

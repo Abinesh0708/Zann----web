@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ArrowRight, MapPin, Code, ShoppingBag, Search, Settings, Star, Quote } from 'lucide-react';
+import { CheckCircle2, ArrowRight, MapPin, Code, ShoppingBag, Search, Smartphone, Star, Quote } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 export default function NagercoilWebDevelopment() {
@@ -8,7 +8,7 @@ export default function NagercoilWebDevelopment() {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Zanntec - Web Development Company in Nagercoil",
-        "description": "Leading web development company in Nagercoil offering affordable website design, ecommerce website development, startup website services, local SEO, and CAD automation solutions.",
+        "description": "Leading web development company in Nagercoil offering affordable website design, ecommerce website development, startup website services, local SEO, and admin dashboard solutions.",
         "url": "https://www.zanntec.org/nagercoil-web-development",
         "telephone": "+91-82480-94054",
         "email": "info@zanntec.org",
@@ -35,7 +35,7 @@ export default function NagercoilWebDevelopment() {
         <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen overflow-hidden">
             <SEOHead
                 title="Web Development Company in Nagercoil | Affordable Website Design | Zanntec"
-                description="Zanntec is the leading web development company in Nagercoil. We offer affordable website design, ecommerce website development, startup website services, local SEO, custom admin dashboards, and CAD automation for businesses in Nagercoil and Kanyakumari district."
+                description="Zanntec is the leading web development company in Nagercoil. We offer affordable website design, ecommerce website development, startup website services, local SEO, custom admin dashboards, and digital transformation services for businesses in Nagercoil and Kanyakumari district."
                 canonicalPath="/nagercoil-web-development"
                 keywords="web development company in nagercoil, ecommerce website development nagercoil, startup website development nagercoil, local seo company nagercoil, engineering service provider nagercoil, digital solutions company nagercoil, affordable website design nagercoil, best web developer nagercoil, SEO services for small business nagercoil"
                 jsonLd={pageJsonLd}
@@ -85,7 +85,7 @@ export default function NagercoilWebDevelopment() {
                             { icon: Code, title: 'Website Development', desc: 'Responsive, SEO-optimized, fast-loading website development for startups and businesses in Nagercoil. From landing pages to corporate portals.' },
                             { icon: ShoppingBag, title: 'E-Commerce Development', desc: 'Custom ecommerce website development for local shops in Nagercoil. Scalable online stores with inventory management and secure payments.' },
                             { icon: Search, title: 'Local SEO Services', desc: 'Local SEO company in Nagercoil helping small businesses rank higher on Google. On-page SEO, keyword optimization, and Google Business Profile setup.' },
-                            { icon: Settings, title: 'CAD Automation', desc: 'Engineering service provider in Nagercoil offering SolidWorks macro automation, CAD workflow optimization, and design automation for manufacturing.' }
+                            { icon: Smartphone, title: 'Admin Dashboards', desc: 'Custom admin dashboard development for businesses in Nagercoil. Powerful admin panels with real-time analytics, user management, and scalable backend architecture.' }
                         ].map((service, i) => (
                             <motion.div
                                 key={i}
@@ -122,7 +122,7 @@ export default function NagercoilWebDevelopment() {
                             "SEO-optimized websites that rank on Google India",
                             "Ecommerce solutions for local shops to sell online",
                             "Fast turnaround — your website ready in 2-4 weeks",
-                            "Combined web + CAD services unique to the region",
+                            "Combined web + digital services unique to the region",
                             "Website maintenance and ongoing support included",
                             "Free consultation and transparent pricing"
                         ].map((item, i) => (

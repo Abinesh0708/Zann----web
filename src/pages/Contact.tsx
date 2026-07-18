@@ -7,7 +7,7 @@ export default function Contact() {
         "@context": "https://schema.org",
         "@type": "ContactPage",
         "name": "Contact Zanntec - Web Development Company in Nagercoil",
-        "description": "Contact Zanntec for web development, CAD automation, and SEO services in Nagercoil, Tirunelveli, and Tamil Nadu. Get a free consultation today.",
+        "description": "Contact Zanntec for web development, ecommerce solutions, and SEO services in Nagercoil, Tirunelveli, and Tamil Nadu. Get a free consultation today.",
         "url": "https://www.zanntec.org/contact",
         "mainEntity": {
             "@type": "LocalBusiness",
@@ -33,8 +33,8 @@ export default function Contact() {
     return (
         <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen overflow-hidden">
             <SEOHead
-                title="Contact Zanntec | Web Development & CAD Services in Nagercoil, Tamil Nadu"
-                description="Contact Zanntec for affordable website development, ecommerce solutions, SolidWorks CAD automation, and SEO services in Nagercoil, Tirunelveli, and Tamil Nadu. Call +91 82480 94054 for a free consultation."
+                title="Contact Zanntec | Web Development & Digital Services in Nagercoil, Tamil Nadu"
+                description="Contact Zanntec for affordable website development, ecommerce solutions, admin dashboards, and SEO services in Nagercoil, Tirunelveli, and Tamil Nadu. Call +91 82480 94054 for a free consultation."
                 canonicalPath="/contact"
                 keywords="web development company in nagercoil, digital marketing company tirunelveli, local seo company nagercoil, engineering service provider nagercoil, startup website development nagercoil, affordable website design tirunelveli, digital solutions company nagercoil"
                 jsonLd={contactJsonLd}
@@ -51,7 +51,7 @@ export default function Contact() {
                         <span className="text-accent italic">FREE CONSULTATION</span>
                     </h1>
                     <p className="text-xl text-gray-600 leading-relaxed font-medium">
-                        Whether you need a website for your business in Nagercoil, ecommerce development in Tirunelveli, CAD automation services, or SEO help in Tamil Nadu — our team is ready to help you scale.
+                        Whether you need a website for your business in Nagercoil, ecommerce development in Tirunelveli, admin dashboards, or SEO help in Tamil Nadu — our team is ready to help you scale.
                     </p>
                 </motion.div>
             </section>
@@ -70,7 +70,7 @@ export default function Contact() {
                             <Mail className="w-8 h-8 text-accent" />
                         </div>
                         <h3 className="text-2xl font-bold text-primary mb-2">Email Us</h3>
-                        <p className="text-gray-600 font-medium mb-6">Reach out for web development quotes, CAD automation inquiries, or SEO consultations.</p>
+                        <p className="text-gray-600 font-medium mb-6">Reach out for web development quotes, digital solution inquiries, or SEO consultations.</p>
                         <a href="mailto:info@zanntec.org" className="text-xl font-bold text-primary hover:text-accent transition-colors truncate block">info@zanntec.org</a>
                     </motion.div>
 
@@ -86,7 +86,7 @@ export default function Contact() {
                             <Phone className="w-8 h-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold mb-2">Direct Line</h3>
-                        <p className="text-gray-300 font-medium mb-6">Need immediate help with your website, ecommerce platform, or CAD project?</p>
+                        <p className="text-gray-300 font-medium mb-6">Need immediate help with your website, ecommerce platform, or digital project?</p>
                         <a href="tel:+918248094054" className="text-xl font-bold text-accent hover:text-white transition-colors">+91 82480 94054</a>
                     </motion.div>
 
@@ -124,7 +124,7 @@ export default function Contact() {
                                 <span className="text-accent italic">Reliable Support.</span>
                             </h2>
                             <p className="text-xl text-gray-300 font-medium leading-relaxed">
-                                We deliver uncompromising quality in every website, admin dashboard, and CAD model. Whether you're a startup in Nagercoil or an enterprise in Tamil Nadu, our digital solutions are built to perform flawlessly.
+                                We deliver uncompromising quality in every website, admin dashboard, and digital solution. Whether you're a startup in Nagercoil or an enterprise in Tamil Nadu, our digital solutions are built to perform flawlessly.
                             </p>
                         </div>
 
@@ -138,7 +138,7 @@ export default function Contact() {
                                 {
                                     icon: Clock,
                                     title: 'Fast Turnaround',
-                                    desc: 'We deploy lean methodologies to deliver fast loading websites and CAD automation solutions without ever sacrificing quality.',
+                                    desc: 'We deploy lean methodologies to deliver fast loading websites and digital solutions without ever sacrificing quality.',
                                 },
                                 {
                                     icon: Phone,
