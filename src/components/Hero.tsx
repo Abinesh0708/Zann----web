@@ -1,182 +1,74 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Code, Monitor, PenTool, Database, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const DigitalFace = () => (
-  <div className="w-full h-full rounded-2xl bg-[#0a0a0d]/90 border border-accent/50 shadow-[0_0_80px_rgba(255,102,0,0.15)] flex flex-col p-6 overflow-hidden">
-    <div
-      className="absolute inset-0 opacity-20"
-      style={{ backgroundImage: 'linear-gradient(rgba(255, 102, 0, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 102, 0, 0.5) 1px, transparent 1px)', backgroundSize: '20px 20px' }}
-    />
-    <div className="relative z-10 flex justify-between items-start mb-auto">
-      <Zap className="w-8 h-8 text-accent" />
-      <span className="text-[10px] font-mono text-accent">SYS.CORE.01</span>
-    </div>
-    <div className="relative z-10 space-y-2 mt-auto">
-      <div className="text-xl font-bold text-white tracking-widest uppercase">Digital Solutions</div>
-      <div className="h-1 w-12 bg-accent" />
-      <div className="font-mono text-[10px] text-gray-400 mt-2 leading-tight">
-        Systems online.<br />
-        Building platforms...<br />
-        <span className="text-accent animate-pulse">Deploying solutions...</span>
-      </div>
-    </div>
-  </div>
-);
-
-const WebFace = () => (
-  <div className="w-full h-full rounded-2xl bg-white/10 border border-white/40 shadow-[0_20px_60px_rgba(0,0,0,0.2)] flex flex-col backdrop-blur-xl overflow-hidden pointer-events-none">
-    <div className="w-full h-8 border-b border-white/20 flex items-center px-4 gap-1.5 bg-white/5">
-      <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
-      <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-      <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
-    </div>
-    <div className="p-6 flex flex-col h-full justify-between relative">
-      <div className="flex items-center gap-4">
-        <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg">
-          <Code className="w-6 h-6" />
-        </div>
-        <div>
-          <div className="text-sm font-bold text-primary tracking-widest uppercase mb-1">Web Development</div>
-          <div className="text-[10px] font-mono text-gray-500 bg-white/50 px-2 py-0.5 rounded">React.js Environment</div>
-        </div>
-      </div>
-      <div className="space-y-2.5 w-full mt-6">
-        <div className="w-3/4 h-2 rounded bg-primary/20" />
-        <div className="w-full h-2 rounded bg-primary/10" />
-        <div className="w-5/6 h-2 rounded bg-primary/20" />
-        <div className="w-1/2 h-2 rounded bg-accent/40" />
-      </div>
-    </div>
-  </div>
-);
-
-const CoreFace = () => (
-  <div className="w-full h-full rounded-full bg-gradient-to-tr from-accent to-primary flex items-center justify-center shadow-[0_0_100px_rgba(255,102,0,0.5)]">
-    <Database className="w-10 h-10 text-white" />
-  </div>
-);
-
-const DoubleSided = ({ children, className, containerStyle }: { children: React.ReactNode, className?: string, containerStyle?: React.CSSProperties }) => (
-  <div className={className} style={{ ...containerStyle, transformStyle: "preserve-3d" }}>
-    <div className="absolute inset-0 pointer-events-none" style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}>
-      {children}
-    </div>
-    <div className="absolute inset-0 pointer-events-none" style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
-      {children}
-    </div>
-  </div>
-);
+import { ArrowUpRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 md:py-32 overflow-hidden bg-[#fafafa]">
-      {/* Subtle Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-accent/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-primary/5 rounded-full blur-[120px]" />
+    <section className="relative min-h-[90svh] sm:min-h-[92svh] md:min-h-svh bg-[#f4f4f2] text-[#050f16] flex flex-col justify-between pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12 px-4 sm:px-6 md:px-12 select-none overflow-hidden">
+      {/* Top micro note */}
+      <div className="pt-2">
+        <span className="font-sans text-xs sm:text-sm font-semibold text-[#7a8a94] uppercase tracking-wider block">
+          Serving businesses worldwide · Based in Tamil Nadu, India
+        </span>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24 z-10 pt-8">
-
-        {/* Left Side: Typography & Content */}
-        <div className="w-full md:w-[55%] flex flex-col items-center md:items-start text-center md:text-left space-y-2">
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
-            className="w-full mt-0 mb-2 md:mb-4 relative z-20"
+      {/* Main Two-Line Statement */}
+      <div className="w-full my-auto flex flex-col justify-center py-6 sm:py-8">
+        <div className="overflow-hidden leading-[0.88] block text-left">
+          <motion.h1
+            initial={{ y: '105%' }}
+            animate={{ y: '0%' }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            className="font-display font-extrabold uppercase text-[9.6vw] sm:text-[10.5vw] md:text-[9.5vw] lg:text-[8.5vw] tracking-[-0.035em] text-[#050f16] whitespace-nowrap block m-0 p-0"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary tracking-tight font-display leading-tight">
-              Grow Your Business with<br className="hidden md:block" />
-              <span className="text-accent"> Smart Digital Solutions</span>
-            </h1>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="space-y-2 relative z-20"
-          >
-            <p className="text-lg md:text-xl text-gray-600 max-w-xl mx-auto md:mx-0 font-medium leading-relaxed">
-              Zanntec is a leading web development company in Nagercoil specializing in SEO-optimized website development, ecommerce solutions, custom admin dashboards, and digital transformation services.
-            </p>
-            <p className="text-sm md:text-base text-accent font-bold uppercase tracking-widest mt-2">
-              Serving businesses across Tamil Nadu, India
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4 w-full"
-          >
-            <Link to="/contact" className="group relative bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-accent transition-all flex items-center gap-2 shadow-xl hover:shadow-2xl">
-              <span>Get Free Consultation</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link to="/services" className="px-8 py-4 rounded-full text-lg font-bold bg-white border-2 border-gray-100 text-primary hover:border-accent hover:text-accent transition-all shadow-sm max-w-max">
-              View Services
-            </Link>
-          </motion.div>
+            DIGITAL SOLUTIONS.
+          </motion.h1>
         </div>
 
-        {/* Right Side: Highly Detailed Double-Sided 3D Rotating Tech Engine */}
-        <motion.div
-          className="w-full md:w-[45%] h-[300px] sm:h-[400px] md:h-[600px] perspective-[2000px] flex items-center justify-center mt-6 md:mt-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
+        <div className="overflow-hidden leading-[0.88] block text-left md:text-right mt-1 md:mt-3">
           <motion.div
-            animate={{ rotateY: [-20, 340], rotateX: [10, 25, 10] }}
-            transition={{
-              rotateY: { duration: 35, repeat: Infinity, ease: "linear" },
-              rotateX: { duration: 15, repeat: Infinity, ease: "easeInOut" }
-            }}
-            style={{ transformStyle: "preserve-3d" }}
-            className="relative w-full max-w-[300px] md:max-w-[400px] aspect-square flex items-center justify-center scale-[0.65] sm:scale-75 md:scale-100"
+            initial={{ y: '105%' }}
+            animate={{ y: '0%' }}
+            transition={{ duration: 0.9, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+            className="font-display font-extrabold uppercase text-[9.6vw] sm:text-[10.5vw] md:text-[9.5vw] lg:text-[8.5vw] tracking-[-0.035em] text-[#ff7a1f] whitespace-nowrap inline-block m-0 p-0"
           >
-            {/* Outer Orbital Rings (HUD Elements) */}
-            <div className="absolute inset-0 rounded-full border border-dashed border-accent/40" style={{ transform: "rotateX(75deg) scale(1.5)" }} />
-            <div className="absolute inset-4 rounded-full border border-primary/20" style={{ transform: "rotateY(60deg) rotateX(45deg) scale(1.3)" }} />
-            <div className="absolute inset-8 rounded-full border-2 border-dotted border-gray-300/30" style={{ transform: "rotateZ(45deg) rotateY(70deg) scale(1.4)" }} />
-
-            {/* Back Layer: Dark Digital / Automation Blueprint */}
-            <DoubleSided className="absolute w-64 h-80" containerStyle={{ transform: "translateZ(-100px) translateX(40px)" }}>
-              <DigitalFace />
-            </DoubleSided>
-
-            {/* Central Glowing Core Element */}
-            <DoubleSided className="absolute w-24 h-24" containerStyle={{ transform: "translateZ(0px)" }}>
-              <CoreFace />
-            </DoubleSided>
-
-            {/* Front Layer: Web UI Dashboard (Glossy Glassmorphism) */}
-            <DoubleSided className="absolute w-72 h-64" containerStyle={{ transform: "translateZ(120px) translateX(-30px)" }}>
-              <WebFace />
-            </DoubleSided>
-
-            {/* Detached Orbiting Data Nodes */}
-            <DoubleSided className="absolute w-12 h-12" containerStyle={{ transform: "translateZ(180px) translateX(120px) translateY(-80px) rotateY(-30deg)" }}>
-              <div className="w-full h-full bg-white/80 backdrop-blur-md rounded-xl border border-white shadow-xl flex items-center justify-center">
-                <Monitor className="w-5 h-5 text-primary" />
-              </div>
-            </DoubleSided>
-
-            <DoubleSided className="absolute w-14 h-14" containerStyle={{ transform: "translateZ(-150px) translateX(-120px) translateY(100px) rotateX(45deg)" }}>
-              <div className="w-full h-full bg-black/80 backdrop-blur-md rounded-full border border-accent flex items-center justify-center shadow-[0_0_30px_rgba(255,102,0,0.3)]">
-                <PenTool className="w-6 h-6 text-accent" />
-              </div>
-            </DoubleSided>
-
+            BUILT FOR BUSINESS.
           </motion.div>
-        </motion.div>
-
+        </div>
       </div>
+
+      {/* Bottom baseline row: supporting paragraph and dual CTAs */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+        className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 sm:gap-8 pt-6 sm:pt-8"
+      >
+        <div className="max-w-2xl space-y-2 sm:space-y-3">
+          <p className="font-sans text-base sm:text-lg md:text-xl text-[#050f16] font-medium leading-relaxed m-0">
+            We build websites and business software that help companies grow, sell online and manage customer relationships more effectively.
+          </p>
+          <p className="font-sans text-xs sm:text-sm md:text-base text-[#394852] font-medium leading-relaxed m-0">
+            From professional business websites and e-commerce platforms to CRM and CMS solutions, Zanntec helps businesses turn digital ideas into practical tools for everyday operations.
+          </p>
+        </div>
+
+        <div className="w-full lg:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 shrink-0">
+          <Link
+            to="/contact"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#050f16] text-[#f4f4f2] hover:bg-[#ff7a1f] hover:text-[#050f16] px-6 sm:px-8 py-3.5 sm:py-4 font-display font-bold text-base sm:text-lg uppercase tracking-wider transition-[background-color,color] duration-150 text-center active:scale-[0.98]"
+          >
+            <span>Start a Project</span>
+            <ArrowUpRight className="w-5 h-5" />
+          </Link>
+          <Link
+            to="/services"
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-white border border-[#050f16]/10 text-[#050f16] hover:bg-[#e8e8e5] px-6 sm:px-8 py-3.5 sm:py-4 font-display font-bold text-base sm:text-lg uppercase tracking-wider transition-[background-color] duration-150 text-center active:scale-[0.98]"
+          >
+            Explore Our Services
+          </Link>
+        </div>
+      </motion.div>
     </section>
   );
 }

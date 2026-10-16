@@ -1,129 +1,151 @@
-import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, Clock, User } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
-const blogPosts = [
-    {
-        slug: 'why-every-business-needs-website-2026',
-        title: 'Why Every Business in Nagercoil Needs a Website in 2026',
-        excerpt: 'Discover why having a professional website is essential for businesses in Nagercoil and Tamil Nadu. From Google visibility to customer trust — here\'s why 2026 is the year to go digital.',
-        date: 'April 11, 2026',
-        readTime: '8 min read',
-        author: 'Zanntec Team',
-        category: 'Business Growth',
-        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2670&auto=format&fit=crop'
-    },
-    {
-        slug: 'how-ecommerce-works-complete-guide',
-        title: 'How E-Commerce Works: A Complete Guide for Business Owners',
-        excerpt: 'Learn how e-commerce websites work behind the scenes — from product listings to payment gateways, inventory management, and order fulfillment. Everything you need to know before building your online store.',
-        date: 'April 11, 2026',
-        readTime: '10 min read',
-        author: 'Zanntec Team',
-        category: 'E-Commerce',
-        image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2670&auto=format&fit=crop'
-    },
-    {
-        slug: 'how-cms-works-guide-for-businesses',
-        title: 'How CMS Works: A Simple Guide for Business Owners',
-        excerpt: 'Understand what a Content Management System (CMS) is, how it works, and why it\'s the smartest choice for managing your business website without touching code.',
-        date: 'April 11, 2026',
-        readTime: '7 min read',
-        author: 'Zanntec Team',
-        category: 'Web Development',
-        image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2672&auto=format&fit=crop'
-    }
+interface ArticleItem {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  category: string;
+  image: string;
+  alt: string;
+}
+
+const articles: ArticleItem[] = [
+  {
+    slug: 'why-every-business-needs-website-2026',
+    title: 'Why Every Business in Nagercoil Needs Bespoke Web Architecture in 2026',
+    excerpt: 'Examining why custom handwritten web applications outperform slow CMS templates in search visibility, customer conversion, and mobile network performance across Tamil Nadu.',
+    date: 'April 11, 2026',
+    readTime: '8 min read',
+    category: 'Architecture',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Engineering blueprint and strategic technical planning'
+  },
+  {
+    slug: 'how-ecommerce-works-complete-guide',
+    title: 'How High-Volume E-Commerce Systems Work Behind the Scenes',
+    excerpt: 'An engineering breakdown of inventory synchronization, payment state machines, automated reconciliation, and edge caching for modern commerce platforms.',
+    date: 'April 11, 2026',
+    readTime: '10 min read',
+    category: 'Systems',
+    image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=80',
+    alt: 'High-throughput commercial inventory handling terminal'
+  },
+  {
+    slug: 'how-cms-works-guide-for-businesses',
+    title: 'Content Management Architectures: Headless vs Monolithic CMS',
+    excerpt: 'Why decoupled headless architectures protect enterprise databases and allow rapid frontend updates without exposing administrative backends to web vulnerabilities.',
+    date: 'April 11, 2026',
+    readTime: '7 min read',
+    category: 'Security',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Code terminal and content architecture schema'
+  }
 ];
 
 export default function Blog() {
-    return (
-        <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen overflow-hidden">
-            <SEOHead
-                title="Blog | Web Development, E-Commerce & SEO Insights | Zanntec"
-                description="Read the latest articles from Zanntec on web development, e-commerce, CMS, SEO strategies, and digital transformation tips for businesses in Nagercoil, Tirunelveli, and Tamil Nadu."
-                canonicalPath="/blog"
-                keywords="web development blog, ecommerce guide, CMS guide, why business needs website, SEO tips tamil nadu, digital marketing blog nagercoil"
-            />
+  const blogJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Zanntec Engineering Journal',
+    description: 'Technical insights on web development, e-commerce architectures, and technical SEO from Zanntec studio in Nagercoil.',
+    url: 'https://www.zanntec.org/blog'
+  };
 
-            {/* Hero */}
-            <section className="max-w-7xl mx-auto px-6 mb-16 md:mb-24">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-center max-w-4xl mx-auto"
+  return (
+    <main className="min-h-svh bg-[#f4f4f2] text-[#050f16] overflow-hidden pt-28">
+      <SEOHead
+        title="Engineering Journal | Zanntec Studio"
+        description="Technical articles and architectural notes on web development, high-throughput ecommerce, and search performance from Zanntec studio in Nagercoil."
+        canonicalPath="/blog"
+        keywords="web development blog tamil nadu, ecommerce architecture guide, headless cms engineering, local seo strategy nagercoil"
+        jsonLd={blogJsonLd}
+      />
+
+      {/* Header */}
+      <section className="px-6 md:px-12 py-16 md:py-24">
+        <div className="w-full">
+          <h1 className="font-display font-extrabold uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.92] text-[#050f16] max-w-[20ch]">
+            ENGINEERING JOURNAL <br />
+            <span className="text-[#ff7a1f]">AND FIELD NOTES</span>
+          </h1>
+          <p className="font-sans text-lg md:text-xl text-[#394852] font-medium max-w-2xl mt-6 leading-relaxed">
+            Technical write-ups, architectural analyses, and performance benchmarks from our software practice in Nagercoil, Tamil Nadu.
+          </p>
+        </div>
+      </section>
+
+      {/* Articles Grid (Clean Editorial Plates, Zero Shadows, Zero Hairlines) */}
+      <section className="px-6 md:px-12 pb-24 md:pb-36">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          {articles.map((post) => (
+            <article
+              key={post.slug}
+              className="bg-white flex flex-col justify-between p-6 hover:bg-[#e8e8e5] transition-[background-color] duration-150 group"
+            >
+              <div>
+                <div className="aspect-[16/10] w-full overflow-hidden bg-[#050f16] mb-6">
+                  <img
+                    src={post.image}
+                    alt={post.alt}
+                    className="w-full h-full object-cover group-hover:scale-102 transition-[transform] duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-between text-xs font-sans text-[#7a8a94] mb-3">
+                  <span className="font-semibold uppercase tracking-wider text-[#ff7a1f]">
+                    {post.category}
+                  </span>
+                  <span className="tabular">{post.date} · {post.readTime}</span>
+                </div>
+
+                <h2 className="font-display font-bold uppercase text-2xl md:text-3xl leading-[0.96] text-[#050f16] mb-4 group-hover:text-[#ff7a1f] transition-[color] duration-150">
+                  <Link to={`/blog/${post.slug}`}>
+                    {post.title}
+                  </Link>
+                </h2>
+
+                <p className="font-sans text-sm md:text-base text-[#394852] font-medium leading-relaxed">
+                  {post.excerpt}
+                </p>
+              </div>
+
+              <div className="pt-8">
+                <Link
+                  to={`/blog/${post.slug}`}
+                  className="inline-flex items-center gap-2 font-display font-bold text-base uppercase tracking-wider text-[#050f16] group-hover:text-[#ff7a1f] transition-[color] duration-150"
                 >
-                    <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Insights & Resources</div>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter leading-tight text-primary mb-8">
-                        OUR <span className="text-accent italic">BLOG</span>
-                    </h1>
-                    <p className="text-lg md:text-2xl text-gray-600 leading-relaxed font-medium">
-                        Expert insights on web development, e-commerce, CMS, SEO, and digital transformation to help your business grow.
-                    </p>
-                </motion.div>
-            </section>
+                  <span>Read Article</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-            {/* Blog Grid */}
-            <section className="bg-secondary py-16 md:py-32">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        {blogPosts.map((post, i) => (
-                            <motion.div
-                                key={post.slug}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                            >
-                                <Link to={`/blog/${post.slug}`} className="block group h-full">
-                                    <article className="bg-white rounded-[30px] overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                                        <div className="relative h-56 overflow-hidden">
-                                            <img
-                                                src={post.image}
-                                                alt={post.title}
-                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                                            />
-                                            <div className="absolute top-4 left-4">
-                                                <span className="bg-accent text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">
-                                                    {post.category}
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div className="p-8 flex flex-col flex-1">
-                                            <div className="flex items-center gap-4 text-sm text-gray-400 font-medium mb-4">
-                                                <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> {post.date}</span>
-                                                <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> {post.readTime}</span>
-                                            </div>
-                                            <h2 className="text-xl font-bold text-primary mb-3 group-hover:text-accent transition-colors leading-snug">
-                                                {post.title}
-                                            </h2>
-                                            <p className="text-gray-600 font-medium leading-relaxed mb-6 flex-1">
-                                                {post.excerpt}
-                                            </p>
-                                            <div className="flex items-center gap-2 text-accent font-bold text-sm uppercase tracking-widest">
-                                                Read Article <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                            </div>
-                                        </div>
-                                    </article>
-                                </Link>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="py-16 md:py-24 bg-accent text-white text-center">
-                <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter mb-6">Need Help with Your Website?</h2>
-                    <p className="text-xl font-medium mb-10 text-white/90">
-                        Whether you need an ecommerce store, CMS website, or business website — we're here to help.
-                    </p>
-                    <Link to="/contact" className="inline-flex items-center justify-center bg-white text-primary px-10 py-5 rounded-full text-xl font-bold hover:bg-secondary transition-all shadow-lg hover:shadow-xl">
-                        Get Free Consultation
-                    </Link>
-                </div>
-            </section>
-        </main>
-    );
+      {/* Bottom Newsletter / Consultation Strip */}
+      <section className="py-20 px-6 md:px-12 bg-[#050f16] text-[#f4f4f2]">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div>
+            <h2 className="font-display font-extrabold uppercase text-3xl sm:text-4xl md:text-5xl leading-none text-white">
+              NEED AN ARCHITECTURAL AUDIT?
+            </h2>
+            <p className="font-sans text-base sm:text-lg text-[#95a3ad] font-medium mt-2">
+              We analyze legacy bottlenecks, TTFB latency scores, and database bottlenecks for businesses across Tamil Nadu.
+            </p>
+          </div>
+          <Link
+            to="/contact"
+            className="shrink-0 bg-[#ff7a1f] text-[#050f16] hover:bg-white hover:text-[#050f16] px-8 py-4 font-display font-bold text-lg uppercase tracking-wider transition-[background-color,color] duration-150 inline-block text-center"
+          >
+            Request Code Audit
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
 }

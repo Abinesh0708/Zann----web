@@ -1,213 +1,240 @@
-import { motion } from 'motion/react';
+import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, User, ArrowLeft, CheckCircle2, FileText, Pencil, Image, Settings, Globe2, Lock } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
+const cmsLayers = [
+  {
+    layer: 'Layer 01',
+    title: 'Content Authoring Interface',
+    desc: 'Structured editing environments allowing non-technical marketing and editorial teams to update copy, schedule articles, and manage rich media without touching code.'
+  },
+  {
+    layer: 'Layer 02',
+    title: 'Management & Access Control',
+    desc: 'Granular role-based permissions, draft approval workflows, taxonomies, and version control protecting database integrity across multi-seat operations.'
+  },
+  {
+    layer: 'Layer 03',
+    title: 'Decoupled Presentation Engine',
+    desc: 'High-speed frontend interfaces pulling cached data via instantaneous API responses, isolating the public user experience from administrative infrastructure.'
+  }
+];
+
+const publishingWorkflow = [
+  {
+    phase: 'Stage 01',
+    title: 'Structured Entry & Asset Upload',
+    desc: 'Writers compose content in markdown or rich block fields. High-resolution images are automatically compressed, formatted into modern WebP variants, and distributed to CDN storage.'
+  },
+  {
+    phase: 'Stage 02',
+    title: 'Validation & Editorial Review',
+    desc: 'Editorial checks verify metadata, OpenGraph preview cards, canonical URLs, and schema markers before committing changes to staging.'
+  },
+  {
+    phase: 'Stage 03',
+    title: 'Atomic Database Mutation',
+    desc: 'The CMS commits structured JSON payloads to relational or document databases with automatic transaction rollback safeguards in place.'
+  },
+  {
+    phase: 'Stage 04',
+    title: 'Static Invalidation & Edge Delivery',
+    desc: 'Webhooks trigger instant cache purge across regional edge nodes, displaying the updated page to global visitors in under 100 milliseconds.'
+  }
+];
+
+const comparisonMatrix = [
+  { feature: 'Frontend Architecture', legacy: 'Coupled monolith (PHP/HTML)', modern: 'Decoupled modern frontend (React/Vite)' },
+  { feature: 'Page Load Speed', legacy: '1.8s – 4.5s (heavy plugin overhead)', modern: '200ms – 600ms (pre-rendered static assets)' },
+  { feature: 'Security Vulnerability Surface', legacy: 'High (public admin panels & plugins)', modern: 'Minimal (headless API with isolated backend)' },
+  { feature: 'Editorial Independence', legacy: 'Requires frequent developer fixes', modern: 'Zero code required for routine content updates' },
+  { feature: 'Scalability Under Traffic', legacy: 'Requires expensive server clustering', modern: 'Global edge distribution handles traffic surges without performance degradation' }
+];
+
 export default function BlogHowCMSWorks() {
-    const blogJsonLd = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "How CMS Works: A Simple Guide for Business Owners",
-        "description": "Understand what a Content Management System (CMS) is, how it works, and why it's the smartest choice for managing your business website without touching code.",
-        "author": { "@type": "Organization", "name": "Zanntec" },
-        "publisher": { "@type": "Organization", "name": "Zanntec", "logo": { "@type": "ImageObject", "url": "https://www.zanntec.org/assets/logo.png" } },
-        "datePublished": "2026-04-11",
-        "dateModified": "2026-04-11",
-        "url": "https://www.zanntec.org/blog/how-cms-works-guide-for-businesses",
-        "mainEntityOfPage": "https://www.zanntec.org/blog/how-cms-works-guide-for-businesses"
-    };
+  const blogJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: 'Content Management Architectures: Headless vs Monolithic CMS',
+    description: 'Why decoupled headless architectures protect enterprise databases and allow rapid frontend updates without exposing administrative backends to web vulnerabilities.',
+    author: {
+      '@type': 'Organization',
+      name: 'Zanntec'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zanntec',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.zanntec.org/assets/logo.png'
+      }
+    },
+    datePublished: '2026-04-11',
+    dateModified: '2026-04-11',
+    url: 'https://www.zanntec.org/blog/how-cms-works-guide-for-businesses',
+    mainEntityOfPage: 'https://www.zanntec.org/blog/how-cms-works-guide-for-businesses'
+  };
 
-    return (
-        <main className="pt-24 md:pt-32 pb-0 bg-white min-h-screen overflow-hidden">
-            <SEOHead
-                title="How CMS Works: A Simple Guide for Business Owners | Zanntec Blog"
-                description="Understand what a Content Management System (CMS) is, how it works, and why it's the smartest choice for managing your business website. Compare WordPress, Headless CMS, and custom solutions."
-                canonicalPath="/blog/how-cms-works-guide-for-businesses"
-                keywords="best CMS for business website India, custom website vs template website India, website maintenance services India, how CMS works, content management system guide"
-                jsonLd={blogJsonLd}
-            />
+  return (
+    <main className="min-h-svh bg-[#f4f4f2] text-[#050f16] overflow-hidden pt-28 pb-24">
+      <SEOHead
+        title="Content Management Architectures: Headless vs Monolithic CMS | Zanntec Journal"
+        description="Why decoupled headless architectures protect enterprise databases and allow rapid frontend updates without exposing administrative backends to web vulnerabilities."
+        canonicalPath="/blog/how-cms-works-guide-for-businesses"
+        keywords="headless cms vs monolithic, content management architecture, strapi headless, cms security, zanntec journal"
+        jsonLd={blogJsonLd}
+      />
 
-            <article className="max-w-4xl mx-auto px-6">
-                <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-                    <Link to="/blog" className="inline-flex items-center gap-2 text-accent font-bold text-sm uppercase tracking-widest mb-8 hover:text-primary transition-colors">
-                        <ArrowLeft className="w-4 h-4" /> Back to Blog
-                    </Link>
+      {/* Header Context */}
+      <section className="px-6 md:px-12 py-12 md:py-16">
+        <div className="max-w-4xl mx-auto">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 font-display font-bold text-sm uppercase tracking-wider text-[#050f16] hover:text-[#ff7a1f] transition-[color] duration-150 mb-8"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Back to Journal</span>
+          </Link>
 
-                    <div className="mb-8">
-                        <span className="bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">Web Development</span>
-                    </div>
+          <div>
+            <span className="font-sans text-sm font-semibold text-[#ff7a1f] uppercase tracking-wider block mb-3">
+              Content Architecture &amp; Security
+            </span>
+            <h1 className="font-display font-extrabold uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.92] text-[#050f16] mb-6">
+              CONTENT MANAGEMENT ARCHITECTURES: <br />
+              <span className="text-[#ff7a1f]">HEADLESS VS MONOLITHIC CMS</span>
+            </h1>
 
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight text-primary mb-6">
-                        How CMS Works: A Simple Guide for Business Owners
-                    </h1>
+            <div className="flex flex-wrap items-center gap-6 font-sans text-sm text-[#7a8a94] font-medium py-4">
+              <span>Author: Zanntec Practice</span>
+              <span className="tabular">Published: April 11, 2026</span>
+              <span className="tabular">Read Time: 7 min read</span>
+            </div>
+          </div>
 
-                    <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400 font-medium mb-12 pb-12 border-b border-gray-100">
-                        <span className="flex items-center gap-1.5"><User className="w-4 h-4" /> Zanntec Team</span>
-                        <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> April 11, 2026</span>
-                        <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 7 min read</span>
-                    </div>
-                </motion.div>
+          {/* Lead Abstract Box */}
+          <div className="mt-8 bg-[#e8e8e5] p-8 md:p-10 font-sans text-lg md:text-xl text-[#050f16] font-medium leading-relaxed">
+            Content management architectures govern how digital assets are structured, versioned, and published. Transitioning from legacy monolithic templates to modern decoupled systems isolates administrative backends from public exploits while delivering sub-second page transitions to end users.
+          </div>
+        </div>
+      </section>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.2 }}
-                    className="prose prose-lg max-w-none"
-                >
-                    <div className="space-y-8 text-gray-700 font-medium leading-relaxed text-lg">
+      {/* Article Content */}
+      <article className="px-6 md:px-12">
+        <div className="max-w-4xl mx-auto space-y-16">
+          {/* Section 1: The Three Layers */}
+          <section>
+            <h2 className="font-display font-extrabold uppercase text-3xl sm:text-4xl text-[#050f16] mb-4">
+              THE THREE LAYERS OF MODERN CONTENT MANAGEMENT
+            </h2>
+            <p className="font-sans text-base sm:text-lg text-[#394852] font-medium leading-relaxed mb-8">
+              A Content Management System (CMS) enables authorized business staff to create, edit, organize, and publish web content without writing code. In modern production deployments, this responsibility is split into three decoupled tiers:
+            </p>
 
-                        <p>
-                            You've heard it before — "You need a CMS for your website." But what exactly is a CMS, and how does it work? If you're a business owner in Nagercoil, Tirunelveli, or anywhere in Tamil Nadu, this guide will explain everything in simple terms so you can make the best decision for your business website.
-                        </p>
-
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-primary !mb-6 !mt-12">What is a CMS?</h2>
-                        <p>
-                            A <strong>Content Management System (CMS)</strong> is software that lets you create, edit, and manage the content on your website — <strong>without writing any code</strong>. Think of it as a control panel for your website. Just like you use WhatsApp to send messages without understanding networking protocols, a CMS lets you update your website without understanding HTML, CSS, or JavaScript.
-                        </p>
-                        <p>
-                            With a CMS, you can add new pages, update text and images, publish blog posts, manage products, and more — all through a user-friendly dashboard.
-                        </p>
-
-                        {/* Visual: How CMS Works */}
-                        <div className="rounded-[30px] bg-primary text-white p-8 md:p-12">
-                            <h2 className="text-2xl md:text-3xl font-extrabold mb-8 text-center">The 3 Layers of a CMS</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                {[
-                                    { icon: Pencil, title: "Content Creation", desc: "Write and format text, upload images, embed videos — all through a visual editor that feels like using Microsoft Word." },
-                                    { icon: Settings, title: "Management Layer", desc: "Organize pages, set navigation menus, manage user permissions, schedule posts, and control who can edit what." },
-                                    { icon: Globe2, title: "Presentation Layer", desc: "Your website's design and layout. The CMS applies your content to pre-built templates so everything looks professional automatically." }
-                                ].map((item, i) => (
-                                    <div key={i} className="bg-white/5 border border-white/10 p-6 rounded-2xl text-center">
-                                        <div className="w-14 h-14 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                                            <item.icon className="w-7 h-7 text-accent" />
-                                        </div>
-                                        <h4 className="font-bold text-lg mb-2">{item.title}</h4>
-                                        <p className="text-gray-300 text-base font-medium">{item.desc}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-primary !mb-6 !mt-12">How Does a CMS Actually Work?</h2>
-                        <p>Here's the simple process:</p>
-
-                        <div className="space-y-6">
-                            {[
-                                { step: "1", title: "You Log In", desc: "Open your browser, go to your website's admin URL (like yoursite.com/admin), and log in with your credentials." },
-                                { step: "2", title: "Create or Edit Content", desc: "Use the visual editor to write text, upload images, or modify existing pages. No coding needed — it works like a word processor." },
-                                { step: "3", title: "Click Publish", desc: "Hit the publish button. The CMS stores your content in a database and instantly updates your live website." },
-                                { step: "4", title: "Visitors See the Update", desc: "When someone visits your website, the CMS pulls the latest content from the database and displays it with your design template." }
-                            ].map((item, i) => (
-                                <div key={i} className="flex gap-6 items-start">
-                                    <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center text-lg font-extrabold shrink-0">
-                                        {item.step}
-                                    </div>
-                                    <div>
-                                        <h4 className="text-xl font-bold text-primary mb-1">{item.title}</h4>
-                                        <p className="text-gray-600">{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-primary !mb-6 !mt-12">Popular CMS Options in India</h2>
-
-                        <div className="rounded-[30px] bg-secondary p-8 md:p-12 border border-gray-100">
-                            <div className="space-y-8">
-                                <div>
-                                    <h3 className="text-xl font-extrabold text-primary mb-2">WordPress</h3>
-                                    <p className="text-gray-600">The world's most popular CMS. Powers 43% of all websites globally. Best for blogs, business sites, and basic e-commerce. Huge plugin ecosystem but requires regular security updates and maintenance.</p>
-                                </div>
-                                <div className="border-t border-gray-200 pt-8">
-                                    <h3 className="text-xl font-extrabold text-primary mb-2">Headless CMS (Strapi, Contentful)</h3>
-                                    <p className="text-gray-600">Modern approach where content is separated from design. Offers maximum flexibility for custom websites and apps. Ideal for businesses that need high performance and scalability. Used by enterprises and tech-forward companies.</p>
-                                </div>
-                                <div className="border-t border-gray-200 pt-8">
-                                    <h3 className="text-xl font-extrabold text-primary mb-2">Custom CMS (Built for You)</h3>
-                                    <p className="text-gray-600">A tailor-made content management system designed specifically for your business needs. No bloat, no unnecessary features — just exactly what you need. This is what Zanntec recommends for businesses that want complete control and maximum performance.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-primary !mb-6 !mt-12">Custom Website vs Template Website</h2>
-                        <p>
-                            This is one of the most common questions business owners ask. Here's the honest comparison:
-                        </p>
-
-                        <div className="overflow-x-auto">
-                            <table className="w-full border-collapse rounded-2xl overflow-hidden">
-                                <thead>
-                                    <tr className="bg-primary text-white">
-                                        <th className="p-4 text-left font-bold">Feature</th>
-                                        <th className="p-4 text-left font-bold">Template (WordPress)</th>
-                                        <th className="p-4 text-left font-bold">Custom Built</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {[
-                                        ["Design", "Pre-made, limited customization", "100% unique to your brand"],
-                                        ["SEO Performance", "Average", "Fully optimized from ground up"],
-                                        ["Loading Speed", "Often slow due to plugins", "Ultra-fast, clean code"],
-                                        ["Security", "Frequent vulnerabilities", "Enterprise-grade security"],
-                                        ["Scalability", "Limited by theme/plugins", "Unlimited growth potential"],
-                                        ["Cost (Initial)", "₹5,000 – ₹20,000", "₹30,000 – ₹2,00,000+"],
-                                        ["Long-term Cost", "High (plugin fees, fixes)", "Low (maintenance only)"],
-                                        ["Best For", "Simple blogs, basic sites", "Serious businesses, e-commerce"]
-                                    ].map((row, i) => (
-                                        <tr key={i} className={i % 2 === 0 ? 'bg-secondary' : 'bg-white'}>
-                                            <td className="p-4 font-bold text-primary">{row[0]}</td>
-                                            <td className="p-4 text-gray-600">{row[1]}</td>
-                                            <td className="p-4 text-gray-600">{row[2]}</td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <p>
-                            For businesses serious about growth, a custom-built website with a tailored CMS is the better investment. You get exactly what you need, it runs faster, ranks better on Google, and costs less in the long run.
-                        </p>
-
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-primary !mb-6 !mt-12">Why Your Business Needs a CMS</h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {[
-                                "Update content without hiring a developer",
-                                "Publish blog posts for SEO ranking",
-                                "Manage products and inventory",
-                                "Control multiple user permissions",
-                                "Schedule content in advance",
-                                "Keep your website fresh and relevant"
-                            ].map((item, i) => (
-                                <div key={i} className="flex items-start gap-3">
-                                    <CheckCircle2 className="w-6 h-6 text-accent shrink-0 mt-0.5" />
-                                    <span className="font-bold text-primary">{item}</span>
-                                </div>
-                            ))}
-                        </div>
-
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-primary !mb-6 !mt-12">The Bottom Line</h2>
-                        <p>
-                            A CMS is the engine that keeps your website running smoothly. It lets you take control of your content, reduce dependency on developers, and keep your website updated and engaging. Whether you choose WordPress, a headless CMS, or a custom-built solution — having a CMS is essential for any business website in 2026.
-                        </p>
-                        <p>
-                            The best CMS for your business depends on your needs, budget, and growth plans. If you're unsure which option to choose, we're here to help you make the right decision.
-                        </p>
-                    </div>
-                </motion.div>
-
-                {/* CTA */}
-                <div className="mt-16 mb-16 pt-12 border-t border-gray-100">
-                    <div className="bg-secondary p-8 md:p-12 rounded-[30px] text-center">
-                        <h3 className="text-2xl font-extrabold text-primary mb-4">Need a Website with a Custom CMS?</h3>
-                        <p className="text-gray-600 font-medium mb-8 max-w-2xl mx-auto">
-                            Zanntec builds custom CMS-powered websites for businesses in Nagercoil, Tirunelveli, and Tamil Nadu. Easy to manage, fast to load, and built for growth.
-                        </p>
-                        <Link to="/contact" className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-accent transition-all">
-                            Get Free Consultation
-                        </Link>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {cmsLayers.map((layer, idx) => (
+                <div key={idx} className="bg-white p-8 flex flex-col justify-between">
+                  <div>
+                    <span className="font-sans text-sm font-semibold text-[#ff7a1f] block mb-2">
+                      {layer.layer}
+                    </span>
+                    <h3 className="font-display font-bold uppercase text-2xl text-[#050f16] mb-3">
+                      {layer.title}
+                    </h3>
+                    <p className="font-sans text-sm sm:text-base text-[#394852] font-medium leading-relaxed">
+                      {layer.desc}
+                    </p>
+                  </div>
                 </div>
-            </article>
-        </main>
-    );
+              ))}
+            </div>
+          </section>
+
+          {/* Section 2: Publishing Pipeline */}
+          <section>
+            <h2 className="font-display font-extrabold uppercase text-3xl sm:text-4xl text-[#050f16] mb-4">
+              THE FOUR-STAGE PUBLISHING PIPELINE
+            </h2>
+            <p className="font-sans text-base sm:text-lg text-[#394852] font-medium leading-relaxed mb-8">
+              Reliable content workflows protect production stability by automating image processing, validation, and edge distribution at every deployment step:
+            </p>
+
+            <div className="space-y-4">
+              {publishingWorkflow.map((item, i) => (
+                <div key={i} className="bg-[#101b24] text-white p-6 md:p-8">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-2">
+                    <h3 className="font-display font-bold uppercase text-xl sm:text-2xl text-white">
+                      {item.title}
+                    </h3>
+                    <span className="font-sans text-sm font-semibold text-[#ff7a1f] shrink-0">
+                      {item.phase}
+                    </span>
+                  </div>
+                  <p className="font-sans text-sm sm:text-base text-[#95a3ad] font-medium leading-relaxed m-0">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Section 3: Comparison Table */}
+          <section className="bg-white p-8 md:p-12">
+            <h2 className="font-display font-extrabold uppercase text-3xl sm:text-4xl text-[#050f16] mb-4">
+              ARCHITECTURAL COMPARISON: DECOUPLED VS MONOLITH
+            </h2>
+            <p className="font-sans text-base sm:text-lg text-[#394852] font-medium leading-relaxed mb-8">
+              Comparing traditional coupled CMS setups with modern decoupled architectures:
+            </p>
+
+            <div className="overflow-x-auto" data-ui="table">
+              <table className="w-full text-left font-sans text-sm md:text-base">
+                <thead>
+                  <tr className="bg-[#050f16] text-[#f4f4f2]">
+                    <th className="p-4 font-display font-bold uppercase tracking-wider text-base">Dimension</th>
+                    <th className="p-4 font-display font-bold uppercase tracking-wider text-base text-[#95a3ad]">Traditional Monolith</th>
+                    <th className="p-4 font-display font-bold uppercase tracking-wider text-base text-[#ff7a1f]">Decoupled Architecture</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonMatrix.map((row, idx) => (
+                    <tr key={idx} className={idx % 2 === 0 ? 'bg-[#f4f4f2]' : 'bg-white'}>
+                      <td className="p-4 font-bold text-[#050f16]">{row.feature}</td>
+                      <td className="p-4 text-[#7a8a94] font-medium">{row.legacy}</td>
+                      <td className="p-4 text-[#050f16] font-semibold">{row.modern}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Bottom Project Intake CTA Plate */}
+          <section className="bg-[#050f16] text-[#f4f4f2] p-10 md:p-14">
+            <div className="max-w-2xl space-y-4">
+              <span className="font-sans text-sm font-semibold text-[#ff7a1f] uppercase tracking-wider block">
+                Take Control
+              </span>
+              <h2 className="font-display font-extrabold uppercase text-3xl sm:text-4xl md:text-5xl text-white leading-tight">
+                NEED A CUSTOM CMS <br />
+                <span className="text-[#ff7a1f]">FOR YOUR ORGANISATION?</span>
+              </h2>
+              <p className="font-sans text-base text-[#95a3ad] font-medium leading-relaxed">
+                We develop fast, secure content management systems tailored to your internal editorial workflows, team permissions, and publishing cadence.
+              </p>
+              <div className="pt-4">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-3 bg-[#ff7a1f] text-[#050f16] hover:bg-white hover:text-[#050f16] px-8 py-4 font-display font-bold text-lg uppercase tracking-wider transition-[background-color,color] duration-150"
+                >
+                  <span>Request CMS Consultation</span>
+                  <ArrowUpRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </main>
+  );
 }

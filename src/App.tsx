@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion, useScroll, useSpring, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 import { Routes, Route, useLocation } from 'react-router-dom';
@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import ServicesPage from './pages/Services';
+import Work from './pages/Work';
 import Contact from './pages/Contact';
 import CaseStudyEcommerce from './pages/CaseStudyEcommerce';
 
@@ -25,12 +26,6 @@ import BlogHowEcommerceWorks from './pages/BlogHowEcommerceWorks';
 import BlogHowCMSWorks from './pages/BlogHowCMSWorks';
 
 export default function App() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
 
   const [showScrollTop, setShowScrollTop] = useState(false);
   const { pathname } = useLocation();
@@ -52,24 +47,20 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen">
-      {/* Progress Bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-accent z-[60] origin-left"
-        style={{ scaleX }}
-      />
+    <div className="relative min-h-svh bg-[#f4f4f2] text-[#050f16]">
 
       {/* Scroll to Top */}
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
-            initial={{ opacity: 0, scale: 0.5 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.5 }}
+            exit={{ opacity: 0, scale: 0.9 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 w-14 h-14 bg-accent text-white rounded-full shadow-lg z-50 flex items-center justify-center hover:bg-primary transition-colors"
+            aria-label="Scroll to top of page"
+            className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 bg-[#050f16] text-white z-40 flex items-center justify-center hover:bg-[#ff7a1f] hover:text-[#050f16] transition-[background-color,color] duration-150 cursor-pointer shadow-lg active:scale-95"
           >
-            <ArrowUp className="w-6 h-6" />
+            <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5" />
           </motion.button>
         )}
       </AnimatePresence>
@@ -80,6 +71,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/work" element={<Work />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/case-study/ecommerce" element={<CaseStudyEcommerce />} />
 

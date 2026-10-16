@@ -1,323 +1,371 @@
-import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
 import Hero from '../components/Hero';
 import SEOHead from '../components/SEOHead';
-import { CheckCircle2, Factory, MonitorSmartphone, ShoppingCart, TrendingUp, Pickaxe, Building2, Star, Quote, ArrowRight } from 'lucide-react';
+
+const coreFoundations = [
+  {
+    title: 'Business Website Development',
+    desc: 'Make a strong first impression with a professional website that communicates your value, showcases your services and helps potential customers take the next step.',
+    link: '/services#business-websites'
+  },
+  {
+    title: 'E-Commerce Development',
+    desc: 'Turn your products into an online shopping experience with organised catalogues, intuitive navigation and the functionality needed to support online sales.',
+    link: '/services#ecommerce'
+  },
+  {
+    title: 'CRM Solutions',
+    desc: 'Bring customer information, enquiries, sales activities and follow-ups into a more organised workflow with customer relationship management solutions tailored to your requirements.',
+    link: '/services#crm'
+  },
+  {
+    title: 'CMS Solutions',
+    desc: 'Manage your website content with greater flexibility. Create, update and organise pages, images and other content without needing to change code for every routine update.',
+    link: '/services#cms'
+  }
+];
+
+const businessStages = [
+  {
+    stage: 'Launch',
+    title: 'Digital Foundation',
+    desc: 'Build your digital foundation with a professional website that introduces your business, explains your offering and gives customers a clear way to contact you.'
+  },
+  {
+    stage: 'Grow',
+    title: 'Commercial Expansion',
+    desc: 'Expand your reach with e-commerce platforms and digital experiences that help customers discover, evaluate and purchase your products.'
+  },
+  {
+    stage: 'Organise',
+    title: 'Operational Workflow',
+    desc: 'Improve how your business handles customer information, sales enquiries and content through appropriate CRM and CMS solutions.'
+  },
+  {
+    stage: 'Evolve',
+    title: 'Continuous Adaptability',
+    desc: 'Adapt your digital systems as your business grows, with improvements and additional functionality based on changing requirements.'
+  }
+];
+
+const differentiators = [
+  {
+    title: 'Business-First Thinking',
+    desc: 'We begin with your objectives, challenges and users, then identify the digital solution that fits your requirements.'
+  },
+  {
+    title: 'Designed Around Your Needs',
+    desc: 'We consider your workflows, content, customers and business model rather than forcing every project into the same template.'
+  },
+  {
+    title: 'Usability at the Centre',
+    desc: 'We focus on clear navigation, intuitive interfaces and straightforward user experiences across supported devices.'
+  },
+  {
+    title: 'Built for Practical Use',
+    desc: 'We consider performance, maintainability, functionality and future requirements during the planning and development process.'
+  },
+  {
+    title: 'Clear Communication',
+    desc: 'We work toward clear expectations, defined deliverables and transparent communication throughout the project.'
+  }
+];
+
+const processSteps = [
+  {
+    step: 'Discover',
+    desc: 'We learn about your business, target audience, objectives and project requirements.'
+  },
+  {
+    step: 'Define',
+    desc: 'We establish the project scope, features, priorities, deliverables and technical approach.'
+  },
+  {
+    step: 'Design',
+    desc: 'We plan the structure and user experience, creating a design direction suited to your brand and audience.'
+  },
+  {
+    step: 'Develop',
+    desc: 'We build the agreed solution, implement its functionality and connect the required systems and integrations.'
+  },
+  {
+    step: 'Test and Deliver',
+    desc: 'We review the solution against the agreed requirements, address identified issues and prepare the final deliverables for handover.'
+  },
+  {
+    step: 'Improve',
+    desc: 'Where ongoing support is agreed, we help maintain and improve your digital solution as your needs evolve.'
+  }
+];
+
+const clientTypes = [
+  {
+    title: 'Startups',
+    desc: 'Establish your online presence and build the digital foundation for your next stage of growth.'
+  },
+  {
+    title: 'Small and Medium-Sized Businesses',
+    desc: 'Present your services professionally, reach customers online and improve business workflows.'
+  },
+  {
+    title: 'E-Commerce Brands',
+    desc: 'Create an online shopping experience that supports your products, customers and operational requirements.'
+  },
+  {
+    title: 'Growing Sales Teams',
+    desc: 'Explore CRM solutions that help organise enquiries, track opportunities and manage customer relationships.'
+  },
+  {
+    title: 'Agencies and Business Partners',
+    desc: 'Collaborate on website development, commerce projects and business software requirements with clearly defined scopes and deliverables.'
+  }
+];
 
 export default function Home() {
-    const parallaxRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: parallaxRef,
-        offset: ["start end", "end start"]
-    });
+  const homeJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Zanntec | Digital Solutions. Built for Business.',
+    description: 'We build websites and business software that help companies grow, sell online and manage customer relationships more effectively.',
+    url: 'https://www.zanntec.org/'
+  };
 
-    const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+  return (
+    <main className="overflow-hidden bg-[#f4f4f2] text-[#050f16]">
+      <SEOHead
+        title="Zanntec | Digital Solutions. Built for Business."
+        description="We build websites and business software that help companies grow, sell online and manage customer relationships more effectively. Professional websites, e-commerce, CRM, and CMS."
+        canonicalPath="/"
+        keywords="business website development, ecommerce development, crm solutions, cms solutions, digital solutions company"
+        jsonLd={homeJsonLd}
+      />
 
-    const homeJsonLd = {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Web Development Company in Nagercoil | Digital Solutions India | Zanntec",
-        "description": "Zanntec is a leading web development company in Nagercoil, Tamil Nadu offering affordable website design, ecommerce website development, admin dashboards, SEO services, and digital transformation solutions for businesses across India.",
-        "url": "https://www.zanntec.org/",
-        "mainEntity": {
-            "@type": "LocalBusiness",
-            "name": "Zanntec",
-            "url": "https://www.zanntec.org",
-            "telephone": "+91-82480-94054",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Nagercoil",
-                "addressRegion": "Tamil Nadu",
-                "addressCountry": "IN"
-            }
-        }
-    };
+      {/* Hero Section */}
+      <Hero />
 
-    return (
-        <main className="overflow-hidden">
-            <SEOHead
-                title="Web Development Company in Nagercoil | Digital Solutions & SEO Services | Zanntec"
-                description="Zanntec is a leading web development company in Nagercoil, Tamil Nadu. We offer affordable website design, ecommerce website development, custom admin dashboards, and SEO services for small businesses across Tirunelveli and Tamil Nadu."
-                canonicalPath="/"
-                keywords="web development company in nagercoil, website design in tirunelveli, best web developer in tamil nadu, ecommerce website development nagercoil, affordable website design tirunelveli, local seo company nagercoil, digital marketing company tirunelveli, startup website development nagercoil, Zanntec web solutions"
-                jsonLd={homeJsonLd}
-            />
-            <Hero />
+      {/* SECTION 1: Build a Better Digital Foundation */}
+      <section className="py-16 sm:py-24 md:py-36 px-4 sm:px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end mb-10 sm:mb-16 md:mb-24">
+            <div className="lg:col-span-8">
+              <span className="font-sans text-xs sm:text-sm font-semibold text-[#ff7a1f] uppercase tracking-wider block mb-2">
+                Digital Foundation
+              </span>
+              <h2 className="font-display font-extrabold uppercase text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.92] text-[#050f16]">
+                BUILD A BETTER <br />
+                DIGITAL FOUNDATION
+              </h2>
+            </div>
+            <div className="lg:col-span-4">
+              <p className="font-sans text-base sm:text-lg text-[#394852] font-medium leading-relaxed m-0">
+                Your digital presence extends beyond a website. It is how customers discover your business, understand your value, interact with your brand and choose to work with you.
+              </p>
+            </div>
+          </div>
 
-            {/* Why Choose Zanntec Section */}
-            <section className="py-16 md:py-32 bg-primary text-white overflow-hidden">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center mb-20">
-                        <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Why Zanntec</div>
-                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight">
-                            WHY CHOOSE <br />
-                            <span className="text-accent italic">ZANNTEC</span>
-                        </h2>
-                        <p className="text-xl text-gray-400 mt-6 max-w-2xl mx-auto">
-                            As the best startup tech company in Tamil Nadu, we blend deep industry expertise with cutting-edge digital innovation to deliver scalable website solutions for your business.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[
-                            { title: "SEO-Optimized Website Development", desc: "Every website we build is fully SEO optimized — from fast loading speeds to mobile-friendly design — ensuring your business ranks higher on Google India." },
-                            { title: "Custom Admin Dashboard Expertise", desc: "From real-time analytics to user management, we build powerful admin panel websites with scalable backend architecture that streamline your business operations." },
-                            { title: "Scalable E-Commerce Solutions", desc: "Our ecommerce website development services are built to grow alongside your expanding customer base, with custom admin dashboards and real-time inventory management." },
-                            { title: "Fast Turnaround Time", desc: "We deploy lean methodologies to deliver high-quality, fast loading website development — from responsive websites to custom admin panels — rapidly without sacrificing detail." },
-                            { title: "Affordable & Cost-Effective", desc: "We offer affordable website design services in Tirunelveli and Nagercoil. Our automation pipelines reduce manual labor hours, converting directly to significant cost savings for your business." },
-                            { title: "Dedicated Local Support", desc: "As an engineering service provider in Nagercoil, we provide round-the-clock website maintenance services, regular check-ins, and proactive troubleshooting for all our partners across Tamil Nadu." }
-                        ].map((feature, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="bg-white/5 border border-white/10 p-8 rounded-[30px] flex flex-col items-start gap-4 hover:bg-white/10 transition-colors group"
-                            >
-                                <CheckCircle2 className="w-10 h-10 text-accent shrink-0 group-hover:scale-110 transition-transform" />
-                                <h3 className="text-2xl font-bold leading-snug">{feature.title}</h3>
-                                <p className="text-gray-400 font-medium leading-relaxed">{feature.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
+            {coreFoundations.map((item, idx) => (
+              <div key={idx} className="bg-[#f4f4f2] p-6 sm:p-8 md:p-10 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-display font-bold uppercase text-xl sm:text-2xl md:text-3xl text-[#050f16] mb-2 sm:mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="font-sans text-sm sm:text-base text-[#394852] font-medium leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
-            </section>
-
-            {/* Featured Solutions / Case Studies */}
-            <section className="py-16 md:py-32 bg-secondary overflow-hidden">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
-                        <div>
-                            <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Case Studies</div>
-                            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight text-primary">
-                                PROVEN <span className="text-accent italic">RESULTS</span>
-                            </h2>
-                        </div>
-                        <Link to="/services" className="text-primary font-bold flex items-center gap-2 hover:text-accent transition-colors pb-4">
-                            Explore All Services <ArrowRight className="w-5 h-5" />
-                        </Link>
-                    </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-primary">
-                        <Link to="/case-study/ecommerce" className="block focus:outline-none focus-visible:ring-4 focus-visible:ring-accent rounded-[40px]">
-                            <motion.div
-                                initial={{ opacity: 0, x: -30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                className="group cursor-pointer"
-                            >
-                                <div className="rounded-[40px] overflow-hidden mb-8 h-[400px] relative">
-                                    <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10" />
-                                    <img
-                                        src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2500&auto=format&fit=crop"
-                                        alt="Ecommerce Website Development - Scalable E-Commerce Platform by Zanntec"
-                                        referrerPolicy="no-referrer"
-                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                    />
-                                </div>
-                                <div className="space-y-4">
-                                    <div className="text-sm font-bold uppercase tracking-widest text-accent flex items-center gap-2">
-                                        E-Commerce Scaling <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0 duration-300" />
-                                    </div>
-                                    <h3 className="text-2xl md:text-3xl font-extrabold group-hover:text-accent transition-colors break-words hyphens-auto">Next-Gen Industrial E-Commerce Platform</h3>
-                                    <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-xl">
-                                        We engineered a high-converting, scalable ecommerce website for local shops and industrial businesses, capable of handling 100k+ concurrent users with integrated inventory management systems.
-                                    </p>
-                                </div>
-                            </motion.div>
-                        </Link>
-
-                        <Link to="/services" className="block focus:outline-none focus-visible:ring-4 focus-visible:ring-accent rounded-[40px]">
-                            <motion.div
-                                initial={{ opacity: 0, x: 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                className="group cursor-pointer"
-                            >
-                                <div className="rounded-[40px] overflow-hidden mb-8 h-[400px] relative">
-                                    <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10" />
-                                    <img
-                                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
-                                        alt="Website Development & SEO Services by Zanntec"
-                                        referrerPolicy="no-referrer"
-                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                    />
-                                </div>
-                                <div className="space-y-4">
-                                    <div className="text-sm font-bold uppercase tracking-widest text-accent flex items-center gap-2">
-                                        Web & SEO Solutions <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0 duration-300" />
-                                    </div>
-                                    <h3 className="text-2xl md:text-3xl font-extrabold group-hover:text-accent transition-colors break-words hyphens-auto">SEO-Optimized Business Websites</h3>
-                                    <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-xl">
-                                        We build responsive, fast-loading websites optimized for search engines that help businesses across Tamil Nadu rank higher on Google and convert visitors into customers.
-                                    </p>
-                                </div>
-                            </motion.div>
-                        </Link>
-                    </div>
+                <div className="pt-6">
+                  <Link
+                    to="/services"
+                    className="inline-flex items-center gap-2 font-display font-bold text-sm uppercase tracking-wider text-[#050f16] hover:text-[#ff7a1f] transition-[color] duration-150"
+                  >
+                    <span>Explore Service</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
                 </div>
-            </section>
+              </div>
+            ))}
+          </div>
 
-            {/* Parallax Image Break */}
-            <section ref={parallaxRef} className="h-[60vh] relative overflow-hidden flex items-center justify-center">
-                <motion.div
-                    style={{ y }}
-                    className="absolute inset-0 z-0"
-                >
-                    <div className="absolute inset-0 bg-primary/40 z-10" />
-                    <img
-                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2569&auto=format&fit=crop"
-                        alt="Web Development and Digital Transformation Solutions"
-                        referrerPolicy="no-referrer"
-                        className="w-full h-[150%] object-cover object-center"
-                    />
-                </motion.div>
-                <div className="relative z-20 text-center px-6 max-w-4xl mx-auto">
-                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white tracking-tighter mb-6">
-                        INNOVATION IN EVERY <span className="text-accent italic">DETAIL</span>
-                    </h2>
-                    <p className="text-xl text-gray-200 font-medium leading-relaxed">
-                        We don't just build software. We architect comprehensive digital transformation solutions — combining web development, ecommerce, and admin dashboards to bring your business visions into reality.
-                    </p>
+          <div className="pt-2 sm:pt-4">
+            <Link
+              to="/services"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#050f16] text-[#f4f4f2] hover:bg-[#ff7a1f] hover:text-[#050f16] px-6 sm:px-8 py-3.5 sm:py-4 font-display font-bold text-base sm:text-lg uppercase tracking-wider transition-[background-color,color] duration-150 active:scale-[0.98]"
+            >
+              <span>Discover Our Services</span>
+              <ArrowUpRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2: Digital Solutions for Every Stage of Business */}
+      <section className="py-16 sm:py-24 md:py-36 px-4 sm:px-6 md:px-12 bg-[#f4f4f2]">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10 sm:mb-16 md:mb-24">
+            <h2 className="font-display font-extrabold uppercase text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.92] text-[#050f16]">
+              DIGITAL SOLUTIONS <br />
+              <span className="text-[#ff7a1f]">FOR EVERY STAGE</span>
+            </h2>
+            <p className="font-sans text-sm sm:text-base md:text-lg text-[#394852] font-medium mt-3 sm:mt-4 max-w-xl">
+              Whether you are launching a new company, expanding an online store or improving internal customer workflows.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {businessStages.map((stage, i) => (
+              <div key={i} className="bg-white p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                  <span className="font-sans text-xs sm:text-sm font-semibold text-[#ff7a1f] uppercase tracking-wider block mb-2">
+                    Phase: {stage.stage}
+                  </span>
+                  <h3 className="font-display font-bold uppercase text-xl sm:text-2xl text-[#050f16] mb-2 sm:mb-3">
+                    {stage.title}
+                  </h3>
+                  <p className="font-sans text-xs sm:text-sm md:text-base text-[#394852] font-medium leading-relaxed">
+                    {stage.desc}
+                  </p>
                 </div>
-            </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Our Process Section */}
-            <section className="py-16 md:py-32 bg-white overflow-hidden">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center mb-24">
-                        <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Methodology</div>
-                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight text-primary">
-                            OUR <span className="text-accent italic">PROCESS</span>
-                        </h2>
-                        <p className="text-xl text-gray-600 mt-6 max-w-2xl mx-auto font-medium">
-                            From requirement analysis to deployment, we follow a strict, iterative blueprint ensuring transparency, agility, and uncompromising quality. Our website development process is optimized for fast loading, secure, and high-converting results.
-                        </p>
-                    </div>
+      {/* SECTION 3: What Makes Our Approach Different? (Statements on Colour Field) */}
+      <section className="py-16 sm:py-24 md:py-36 px-4 sm:px-6 md:px-12 bg-[#050f16] text-[#f4f4f2]">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10 sm:mb-16 md:mb-24">
+            <h2 className="font-display font-extrabold uppercase text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.92] text-white">
+              WHAT MAKES OUR <br />
+              <span className="text-[#ff7a1f]">APPROACH DIFFERENT</span>
+            </h2>
+          </div>
 
-                    <div className="relative max-w-5xl mx-auto">
-                        {/* Connecting line */}
-                        <div className="hidden md:block absolute left-[3.5rem] top-12 bottom-12 w-1 bg-primary/10" />
-
-                        <div className="space-y-16">
-                            {[
-                                { title: 'Requirement Analysis', desc: 'We begin with deep-dive technical workshops to fully understand your operational pain points, business goals, and target audience — whether you need a startup website development in Nagercoil or an enterprise digital transformation solution.' },
-                                { title: 'Planning & Strategy', desc: 'Our architects develop wireframes, UI/UX designs, SEO strategies, and comprehensive sprint timelines — ensuring total alignment before development begins. We plan for responsive, mobile-friendly website design from day one.' },
-                                { title: 'Design & Development', desc: 'Our cross-functional teams execute the blueprint with precision, building SEO-optimized, fast-loading websites and custom admin dashboards using modern frameworks like React and Next.js.' },
-                                { title: 'Testing & Optimization', desc: 'Rigorous QA protocols, performance testing, and SEO audits guarantee your website loads fast, ranks higher on Google India, and converts visitors into customers.' },
-                                { title: 'Delivery & Support', desc: 'Deployment is just the beginning. We provide complete website maintenance services including security patches, performance monitoring, and ongoing support for businesses across Tamil Nadu.' },
-                            ].map((step, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: i * 0.1 }}
-                                    className="flex flex-col md:flex-row gap-8 md:gap-16 relative"
-                                >
-                                    <div className="w-28 h-28 rounded-[30px] bg-secondary text-primary border border-gray-100 flex items-center justify-center text-4xl font-extrabold shrink-0 z-10 shadow-sm">
-                                        0{i + 1}
-                                    </div>
-                                    <div className="flex-1 pt-4">
-                                        <h3 className="text-2xl md:text-3xl font-extrabold text-primary mb-4 break-words hyphens-auto">{step.title}</h3>
-                                        <p className="text-gray-600 font-medium text-xl leading-relaxed">{step.desc}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8">
+            {differentiators.map((diff, i) => (
+              <div
+                key={i}
+                className={`bg-[#101b24] p-6 sm:p-8 flex flex-col justify-between md:col-span-1 lg:col-span-2 ${
+                  i === 3 ? 'lg:col-start-2' : ''
+                } ${
+                  i === 4
+                    ? 'md:col-span-2 md:max-w-md md:w-full md:mx-auto lg:max-w-none lg:mx-0 lg:col-span-2'
+                    : ''
+                }`}
+              >
+                <div>
+                  <h3 className="font-display font-bold uppercase text-xl sm:text-2xl text-white mb-2 sm:mb-3">
+                    {diff.title}
+                  </h3>
+                  <p className="font-sans text-xs sm:text-sm md:text-base text-[#95a3ad] font-medium leading-relaxed">
+                    {diff.desc}
+                  </p>
                 </div>
-            </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Testimonials */}
-            <section className="py-16 md:py-32 bg-primary text-white overflow-hidden">
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                    <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Client Feedback</div>
-                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-12">
-                        WHAT OUR <span className="text-accent italic">PARTNERS</span> SAY
-                    </h2>
+      {/* SECTION 4: Our Process (Clean Process Stages) */}
+      <section className="py-16 sm:py-24 md:py-36 px-4 sm:px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10 sm:mb-16 md:mb-24">
+            <h2 className="font-display font-extrabold uppercase text-3xl sm:text-5xl md:text-6xl text-[#050f16]">
+              OUR PROCESS
+            </h2>
+            <p className="font-sans text-sm sm:text-base md:text-lg text-[#394852] font-medium mt-3 max-w-xl">
+              A structured, transparent workflow from first discovery to deployment and continuous improvement.
+            </p>
+          </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                        {[
-                            { name: "Sarah Jenkins", role: "CTO, TechBuild Manufacturing", text: "Zanntec completely revolutionized our digital infrastructure. The custom admin dashboards and workflow automation they delivered cut our operational time in half. Best digital solutions company in India." },
-                            { name: "Marcus Chen", role: "Founder, Apex Retail", text: "Scaling our E-Commerce platform seemed insurmountable until Zanntec's team rebuilt our backend architecture. Their ecommerce website development expertise is unmatched." },
-                            { name: "Elena Rostova", role: "Director of IT, Global Logistics", text: "Their commitment to client support is unmatched. When we had a critical security update requirement, Zanntec had it resolved within the hour. Truly a secure website development company." }
-                        ].map((t, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="bg-white/5 border border-white/10 p-10 rounded-[30px] relative"
-                            >
-                                <Quote className="absolute top-8 right-8 w-12 h-12 text-white/10" />
-                                <div className="flex gap-1 mb-8">
-                                    {[...Array(5)].map((_, idx) => (
-                                        <Star key={idx} className="w-5 h-5 text-accent fill-accent" />
-                                    ))}
-                                </div>
-                                <p className="text-xl font-medium leading-relaxed text-gray-200 mb-8">
-                                    "{t.text}"
-                                </p>
-                                <div>
-                                    <div className="font-bold text-lg">{t.name}</div>
-                                    <div className="text-sm font-bold uppercase tracking-widest text-accent mt-1">{t.role}</div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {processSteps.map((item, i) => (
+              <div key={i} className="bg-[#f4f4f2] p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                  <span className="font-sans text-xs sm:text-sm font-semibold text-[#ff7a1f] block mb-2">
+                    Stage {i + 1}
+                  </span>
+                  <h3 className="font-display font-bold uppercase text-xl sm:text-2xl md:text-3xl text-[#050f16] mb-2 sm:mb-3">
+                    {item.step}
+                  </h3>
+                  <p className="font-sans text-xs sm:text-sm md:text-base text-[#394852] font-medium leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
-            </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Industries We Serve */}
-            <section className="py-16 md:py-32 bg-secondary overflow-hidden">
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                    <div className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Sectors</div>
-                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tighter leading-tight text-primary mb-12">
-                        INDUSTRIES WE <span className="text-accent italic">SERVE</span>
-                    </h2>
+      {/* SECTION 5: Who We Work With */}
+      <section className="py-16 sm:py-24 md:py-36 px-4 sm:px-6 md:px-12 bg-[#f4f4f2]">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10 sm:mb-16 md:mb-24">
+            <h2 className="font-display font-extrabold uppercase text-3xl sm:text-5xl md:text-6xl text-[#050f16]">
+              WHO WE WORK WITH
+            </h2>
+            <p className="font-sans text-sm sm:text-base md:text-lg text-[#394852] font-medium mt-3 max-w-xl">
+              Solutions designed around your operational requirements, whether launching or scaling.
+            </p>
+          </div>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-6">
-                        {[
-                            { name: 'Engineering & Manufacturing', icon: Factory },
-                            { name: 'Mining & Industrial', icon: Pickaxe },
-                            { name: 'E-commerce Businesses', icon: ShoppingCart },
-                            { name: 'Startups & Enterprises', icon: TrendingUp },
-                            { name: 'Construction & Infrastructure', icon: Building2 },
-                        ].map((industry, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="group px-2 py-5 sm:p-4 md:p-8 rounded-[30px] bg-white border border-gray-100 flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-6 hover:bg-primary transition-colors shadow-sm cursor-pointer text-center box-border"
-                            >
-                                <div className="bg-secondary group-hover:bg-white/10 p-3 sm:p-4 md:p-6 rounded-full transition-colors shrink-0">
-                                    <industry.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-accent" />
-                                </div>
-                                <h3 className="font-bold text-primary group-hover:text-white transition-colors text-xs sm:text-sm md:text-lg leading-snug hyphens-auto break-words">{industry.name}</h3>
-                            </motion.div>
-                        ))}
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8">
+            {clientTypes.map((client, i) => (
+              <div
+                key={i}
+                className={`bg-white p-6 sm:p-8 flex flex-col justify-between md:col-span-1 lg:col-span-2 ${
+                  i === 3 ? 'lg:col-start-2' : ''
+                } ${
+                  i === 4
+                    ? 'md:col-span-2 md:max-w-md md:w-full md:mx-auto lg:max-w-none lg:mx-0 lg:col-span-2'
+                    : ''
+                }`}
+              >
+                <div>
+                  <h3 className="font-display font-bold uppercase text-xl sm:text-2xl text-[#050f16] mb-2 sm:mb-3">
+                    {client.title}
+                  </h3>
+                  <p className="font-sans text-xs sm:text-sm md:text-base text-[#394852] font-medium leading-relaxed">
+                    {client.desc}
+                  </p>
                 </div>
-            </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* CTA Section */}
-            <section className="py-16 md:py-24 bg-accent text-white text-center overflow-hidden">
-                <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tighter mb-6">Ready to Transform Your Business?</h2>
-                    <p className="text-xl font-medium mb-10 text-white/90">
-                        Whether you need a responsive website, an ecommerce platform, or admin dashboard solutions — let's discuss how our digital services can grow your business in Tamil Nadu and beyond.
-                    </p>
-                    <Link to="/contact" className="inline-flex items-center justify-center bg-white text-primary px-10 py-5 rounded-full text-xl font-bold hover:bg-secondary transition-all shadow-lg hover:shadow-xl">
-                        Get Free Consultation
-                    </Link>
-                </div>
-            </section>
-        </main>
-    );
+      {/* SECTION 6: Let's Build Something That Moves Your Business Forward */}
+      <section className="py-16 sm:py-24 md:py-36 px-4 sm:px-6 md:px-12 bg-[#ff7a1f] text-[#050f16]">
+        <div className="max-w-5xl mx-auto space-y-6">
+          <h2 className="font-display font-extrabold uppercase text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.92] text-[#050f16]">
+            LET'S BUILD SOMETHING <br />
+            THAT MOVES YOU FORWARD
+          </h2>
+          <p className="font-sans text-base sm:text-lg md:text-xl text-[#050f16] font-medium max-w-2xl leading-relaxed">
+            Whether you need a new website, an online store or a better way to manage customers and content, we would like to understand your goals. Tell us about your project, your challenges and what you want to achieve.
+          </p>
+          <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <Link
+              to="/contact"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#050f16] text-[#f4f4f2] hover:bg-white hover:text-[#050f16] px-6 sm:px-8 py-3.5 sm:py-4 font-display font-bold text-base sm:text-lg uppercase tracking-wider transition-[background-color,color] duration-150 text-center active:scale-[0.98]"
+            >
+              <span>Start a Project</span>
+              <ArrowUpRight className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/contact"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-white text-[#050f16] hover:bg-[#050f16] hover:text-white px-6 sm:px-8 py-3.5 sm:py-4 font-display font-bold text-base sm:text-lg uppercase tracking-wider transition-[background-color,color] duration-150 text-center active:scale-[0.98]"
+            >
+              Contact Our Team
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }
